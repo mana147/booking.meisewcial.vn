@@ -13,6 +13,5 @@ else
 	define('DB_MASTER_USER', 'nugfhltmhosting_booking');
 	define('DB_MASTER_PASS', 'Hieu761321');
 	define('DB_MASTER_DBNAME', 'nugfhltmhosting_booking');
-
 }
 ?>
