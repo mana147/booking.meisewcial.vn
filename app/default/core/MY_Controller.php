@@ -66,10 +66,7 @@ class MY_Controller extends CI_Controller {
     
 
     protected function _loadFooter() {
-        $data = array();
-        $this->load->model('setup/Setup_model');
-        $data['setup'] = $this->Setup_model->st_setup_get_info(1);
-        $this->load->view($this->_template_f . 'footer_view', $data);
+		$this->load->view($this->_template_f . 'footer_view');
     }
     
     
