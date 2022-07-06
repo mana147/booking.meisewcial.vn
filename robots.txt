@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /adpanel/
+Disallow: /api/
+Disallow: /app/
+Disallow: /captcha/
+Disallow: /ci_core/
+Disallow: /ipapi/
+Disallow: /js/
+Disallow: /skins/
+Disallow: /uploads/
+Disallow: /tmp/
