@@ -86,11 +86,11 @@ if(!defined('USE_DB_SLAVE'))
 }
 
 $db['default'] = array(
-    'dsn' => 'mysql:host=' . DB_HOALAN_MASTER_HOST . ';dbname=' . DB_HOALAN_MASTER_DBNAME,
-    'hostname' => DB_HOALAN_MASTER_HOST,
-    'username' => DB_HOALAN_MASTER_USER,
-    'password' => DB_HOALAN_MASTER_PASS,
-    'database' => DB_HOALAN_MASTER_DBNAME,
+    'dsn' => 'mysql:host=' . DB_MASTER_HOST . ';dbname=' . DB_MASTER_DBNAME,
+    'hostname' => DB_MASTER_HOST,
+    'username' => DB_MASTER_USER,
+    'password' => DB_MASTER_PASS,
+    'database' => DB_MASTER_DBNAME,
     'dbdriver' => 'pdo',
     'dbprefix' => '',
     'pconnect' => FALSE,
@@ -106,29 +106,4 @@ $db['default'] = array(
     'failover' => array(),
     'save_queries' => TRUE,
     'custom_set_utf8' => TRUE
-);
-
-$db['slave'] = array(
-    array(
-        'dsn' => 'mysql:host=' . DB_HOALAN_SLAVE_HOST . ';dbname=' . DB_HOALAN_SLAVE_DBNAME,
-        'hostname' => DB_HOALAN_SLAVE_HOST,
-        'username' => DB_HOALAN_SLAVE_USER,
-        'password' => DB_HOALAN_SLAVE_PASS,
-        'database' => DB_HOALAN_SLAVE_DBNAME,
-        'dbdriver' => 'pdo',
-        'dbprefix' => '',
-        'pconnect' => FALSE,
-        'db_debug' => (ENVIRONMENT !== 'production'),
-        'cache_on' => FALSE,
-        'cachedir' => '',
-        	'char_set' => 'latin1',
-	'dbcollat' => 'latin1_swedish_ci',
-        'swap_pre' => '',
-        'encrypt' => FALSE,
-        'compress' => FALSE,
-        'stricton' => FALSE,
-        'failover' => array(),
-        'save_queries' => TRUE,
-        'custom_set_utf8' => TRUE
-    )
 );
