@@ -53,53 +53,33 @@ $route['default_controller'] = 'dashboard/dashboard/index';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-//san phẩm
-$route['san-pham/chi-tiet'] = 'sanpham/sanpham/chitiet';
-//$route['san-pham'] = 'sanpham/sanpham/danhmuc';
-$route['lan-moi-dang.html'] = 'sanpham/sanpham/hoamoive';
-$route['lan-moi-dang/([a-z]+)/([0-9]+).html'] = 'sanpham/sanpham/hoamoive/$1/$2';
-$route['lan-moi-dang/([a-z]+)/([0-9]+)/([0-9]+)([0-9]+)([0-9]+).html'] = 'sanpham/sanpham/hoamoive/$1/$2/$3/$4/$5';
-
-$route['lan-dang-sale.html'] = 'sanpham/sanpham/landangsale';
-$route['lan-dang-sale/([a-z]+)/([0-9]+).html'] = 'sanpham/sanpham/landangsale/$1/$2';
-$route['lan-dang-sale/([a-z]+)/([0-9]+)/([0-9]+)([0-9]+).html'] = 'sanpham/sanpham/landangsale/$1/$2/$3/$4';
-$route['([a-zA-Z0-9-_]+)-c([0-9]+).html'] = 'sanpham/sanpham/danhmuc/$1/$2';
-$route['([a-zA-Z0-9-_]+)-c([0-9]+)/([a-z]+)/([0-9]+).html'] = 'sanpham/sanpham/danhmuc/$1/$2/$3/$4';
-$route['([a-zA-Z0-9-_]+)-c([0-9]+)/([a-z]+)/([0-9]+)/([0-9]+)([0-9]+)([0-9]+).html'] = 'sanpham/sanpham/danhmuc/$1/$2/$3/$4/$5/$6/$7';
-
-//chi tiet san pham
-$route['([a-zA-Z0-9-_]+)/([a-zA-Z0-9-_]+)-c([0-9]+)a([0-9]+).html'] = 'sanpham/sanpham/chitiet/$1/$2/$3/$4';
-$route['tim-kiem.html'] = 'sanpham/sanpham/timkiem';
-$route['ket-qua-tim-kiem.html'] = 'sanpham/sanpham/kqtimkiem';
-$route['ket-qua-tim-kiem/([a-z]+)/([0-9]+).html'] = 'sanpham/sanpham/kqtimkiem/$1/$2';
-
-//tài khoản
-$route['dang-ky-tai-khoan.html'] = 'taikhoan/taikhoan/dangky';
-$route['dang-ky/check-email'] = 'taikhoan/taikhoan/checkemail';
-$route['dang-ky/them-moi'] = 'taikhoan/taikhoan/newUser';
-$route['dang-ky/kich-hoat'] = 'taikhoan/taikhoan/active';
-$route['dang-nhap'] = 'taikhoan/taikhoan/login';
-$route['dang-xuat.html'] = 'taikhoan/taikhoan/logout';
-$route['thong-tin-tai-khoan.html'] = 'taikhoan/taikhoan/info';
-$route['loadarea2'] = 'taikhoan/taikhoan/load_area2';
-$route['xoa-dia-chi'] = 'taikhoan/taikhoan/removeAdd';
-$route['address-set-default'] = 'taikhoan/taikhoan/setdefault';
-$route['don-hang-cua-toi.html'] = 'taikhoan/taikhoan/info_order';
-$route['removeOrder'] = 'taikhoan/taikhoan/removeOrder';
-$route['mail'] = 'cart/cart/mail';
-
-$route['fbcallback'] = 'taikhoan/taikhoan/fbcallback';
-$route['ggcallback'] = 'taikhoan/taikhoan/ggcallback';
-
-//giohang
-$route['gio-hang/them.html'] = 'cart/cart/add';
-$route['gio-hang.html'] = 'cart/cart/index';
-$route['giohang/sua.html'] = 'cart/cart/update';
-$route['dat-hang.html'] = 'cart/cart/payment';
-$route['process'] = 'cart/cart/process';
-
-//lien hệ
-$route['lien-he.html'] = 'dashboard/dashboard/contact';
-$route['gioi-thieu.html'] = 'dashboard/dashboard/introduction';
-
-
+if(defined('MULTI_LANGUAGE'))
+{
+	if(MULTI_LANGUAGE)
+	{
+		if(defined('URI_PATH') && URI_PATH == '')
+		{
+			$route['(\w{2})/(.*)'] = '$2';
+			$route['(\w{2})'] = $route['default_controller'];
+		}
+		else if(defined('URI_PATH') && URI_PATH != '')
+		{
+			$route['(\w{2})/[a-zA-Z]*/(.*)'] = '$2';
+			$route['(\w{2})/[a-zA-Z]*'] = $route['default_controller'];
+		}
+	}
+	else
+	{
+		if(defined('URI_PATH') && URI_PATH == '')
+		{
+			$route['(.*)'] = '$1';
+			$route[''] = $route['default_controller'];
+		}
+		else if(defined('URI_PATH') && URI_PATH != '')
+		{
+			
+			$route['[a-zA-Z]*/(.*)'] = '$1';
+			$route['[a-zA-Z]*'] = $route['default_controller'];
+		}
+	}
+}
