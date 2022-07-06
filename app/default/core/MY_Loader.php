@@ -66,13 +66,6 @@ class MY_Loader extends CI_Loader {
 		// Load the DB class
 		$CI->db =& DB($params, $query_builder);
 		
-		// add by toannh. For create slave connection
-		if(USE_DB_SLAVE)
-		{
-			$CI->db_slave = '';
-			$CI->db_slave = &DB_SLAVE('', false);
-		}
-
 		return $this;
 	}
 	
