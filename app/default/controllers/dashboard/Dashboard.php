@@ -12,8 +12,10 @@ class Dashboard extends MY_Controller {
     function index() {
         $data = [];
 
+        var_dump($this->_template_f);die;
+        
         $this->_loadHeader();
-        $this->load->view($this->_template_f . 'trangchu/trangchu_view', $data);
+        $this->load->view($this->_template_f . 'index/', $data);
         $this->_loadFooter();
     }
     
