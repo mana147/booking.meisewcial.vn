@@ -9,12 +9,7 @@ class Dashboard extends MY_Controller {
         parent::__construct();
     }
 
-    function index() {
-
-
-        die("ok");
-
-        
+    function index() {        
         $data = [];
         $this->_loadHeader();
         $this->load->view($this->_template_f . 'dashboard/dashboard_view', $data);
