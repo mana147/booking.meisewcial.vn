@@ -12,11 +12,11 @@ class Dashboard extends MY_Controller {
     function index() {
         $data = [];
 
-        var_dump($this->_template_f);die;
+        echo $this->_template_f;
         
-        $this->_loadHeader();
-        $this->load->view($this->_template_f . 'index/', $data);
-        $this->_loadFooter();
+        die;
+
+
     }
     
 }
