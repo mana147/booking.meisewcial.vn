@@ -17,8 +17,9 @@ class Dashboard extends MY_Controller {
         
         $data = [];
         $this->_loadHeader();
-        $this->load->view($this->_template_f . 'index/', $data);
+        $this->load->view($this->_template_f . 'dashboard/dashboard_view', $data);
         $this->_loadFooter();
+
     }
     
 }
