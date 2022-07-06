@@ -11,6 +11,8 @@ class Dashboard extends MY_Controller {
 
     function index() {
         $data = [];
+        die("ok");
+        
 
         echo $this->_template_f;
         
