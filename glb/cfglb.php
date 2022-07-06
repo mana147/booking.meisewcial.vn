@@ -8,8 +8,6 @@ else
 {
 	// define http protocol
 	define('HTTP_PROTOCOL', 'http');
-	
-
 
 }
 ?>
