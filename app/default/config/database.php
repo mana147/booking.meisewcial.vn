@@ -76,14 +76,7 @@ $query_builder = TRUE;
 
 // list index cac server slave die trong mang cac slave server
 // de tranh random vao server do doi timeout connection, gay cham site
-if(!defined('DB_SLAVE_DIE'))
-{
-	define('DB_SLAVE_DIE', '');
-}
-if(!defined('USE_DB_SLAVE'))
-{
-	define('USE_DB_SLAVE', TRUE);
-}
+
 
 $db['default'] = array(
     'dsn' => 'mysql:host=' . DB_MASTER_HOST . ';dbname=' . DB_MASTER_DBNAME,
