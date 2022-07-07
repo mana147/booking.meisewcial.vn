@@ -126,9 +126,9 @@ DEFINE('MULTI_LANGUAGE', FALSE);
 DEFINE('CUSTOM_APPS', ',default,');
 DEFINE('CUSTOM_LANG_URI', '');
 DEFINE('CUSTOM_DEFAULT_LANG_URI', '');
-$application_folder = 'default';
 
-$application_folder = 'app/' . $application_folder;
+$application_folder = 'default';
+$application_folder = 'app/'.$application_folder;
 
 define('APPPATHs', $application_folder . '/');
 

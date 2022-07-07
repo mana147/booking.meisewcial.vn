@@ -1,10 +1,9 @@
 <?php
 
-if (!defined('BASEPATH'))
-    exit('No direct script access allowed');
+if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class MY_Controller extends CI_Controller {
-
+class MY_Controller extends CI_Controller
+{
     protected $_template_f = '';
     protected $_langcode = '';
     protected $_langcodeid = '';
@@ -13,7 +12,8 @@ class MY_Controller extends CI_Controller {
     protected $_product_name = '';
     protected $_numShowItem = 30;
 
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
         $this->_langcode = get_langcode();
         $this->_langcodeid = get_langcode_id($this->_langcode);
@@ -52,53 +52,56 @@ class MY_Controller extends CI_Controller {
         $this->load->view($this->_template_f . 'preheader_view', $preHeader);
     }
 
-    protected function _loadHeader($data = null, $isLoadHeader = true) {
+    protected function _loadHeader($data = null, $isLoadHeader = true)
+    {
         $header = array();
         $header['title'] = isset($data['title']) ? $data['title'] : '';
         $header['metaTitle'] = isset($data['metaTitle']) ? $data['metaTitle'] : '';
         $header['metaKeyword'] = isset($data['metaKeyword']) ? $data['metaKeyword'] : '';
         $header['metaDesc'] = isset($data['metaDesc']) ? $data['metaDesc'] : '';
         $header['isLoadHeader'] = $isLoadHeader;
-        
+
         // load header
         $this->load->view($this->_template_f . 'header_view', $header);
     }
-    
 
-    protected function _loadFooter() {
-		$this->load->view($this->_template_f . 'footer_view');
+    protected function _loadFooter()
+    {
+        $this->load->view($this->_template_f . 'footer_view');
     }
-    
-    
-    protected function _session_uid() {
+
+    protected function _session_uid()
+    {
         $user_id = trim($this->session->userdata('userid'));
         $user_id = isIdNumber($user_id) ? $user_id : 0;
         return $user_id;
     }
 
-    protected function _session_role() {
+    protected function _session_role()
+    {
         $role = trim($this->session->userdata('role'));
         $role = $role >= -1 && $role <= 10 && is_numeric($role) ? $role : 3;
         return $role;
     }
 
-    protected function _session_fullname() {
+    protected function _session_fullname()
+    {
         $uname = $this->session->userdata('lastname') . ' ' . $this->session->userdata('firstname');
         return $uname;
     }
 
-    protected function _isLogin() {
+    protected function _isLogin()
+    {
         $user_id = $this->_session_uid();
         $firstname = $this->_session_fullname();
         return ($user_id > 0 && $firstname != '') ? true : false;
     }
 
-    
-    protected function _isPost() {
+    protected function _isPost()
+    {
         if ($this->input->server('REQUEST_METHOD') == 'POST') {
             return true;
         }
         return false;
     }
-
 }
