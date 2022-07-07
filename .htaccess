@@ -8,10 +8,9 @@
 	RewriteEngine On 
 	RewriteBase /
 	RewriteRule ^admin/?(.*)$ adpanel/$1 [L,NC]
-	
+
 	#comment if dev on local
 	#RewriteCond %{HTTPS}  off
-	#RewriteRule ^(.*)$ https://adx.admicro.vn/$1 [R=302,L]
 
     RewriteCond %{REQUEST_FILENAME} !-f
  	RewriteCond %{REQUEST_FILENAME} !-d
