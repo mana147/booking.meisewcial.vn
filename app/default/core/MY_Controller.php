@@ -4,13 +4,13 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 class MY_Controller extends CI_Controller
 {
-    protected $_template_f = '';
-    protected $_langcode = '';
-    protected $_langcodeid = '';
-    protected $_module = '';
-    protected $_function = '';
-    protected $_product_name = '';
-    protected $_numShowItem = 30;
+    var $_template_f = '';
+    var $_langcode = '';
+    var $_langcodeid = '';
+    var $_module = '';
+    var $_function = '';
+    var $_product_name = '';
+    var $_numShowItem = 30;
 
     public function __construct()
     {
