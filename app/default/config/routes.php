@@ -55,5 +55,33 @@ $route['translate_uri_dashes'] = FALSE;
 
 // $route['login'] = 'login/login/index';
 
-$route['(.*)'] = '$1';
-$route[''] = $route['default_controller'];
+if(defined('MULTI_LANGUAGE'))
+{
+	if(MULTI_LANGUAGE)
+	{
+		if(defined('URI_PATH') && URI_PATH == '')
+		{
+			$route['(\w{2})/(.*)'] = '$2';
+			$route['(\w{2})'] = $route['default_controller'];
+		}
+		else if(defined('URI_PATH') && URI_PATH != '')
+		{
+			$route['(\w{2})/[a-zA-Z]*/(.*)'] = '$2';
+			$route['(\w{2})/[a-zA-Z]*'] = $route['default_controller'];
+		}
+	}
+	else
+	{
+		if(defined('URI_PATH') && URI_PATH == '')
+		{
+			$route['(.*)'] = '$1';
+			$route[''] = $route['default_controller'];
+		}
+		else if(defined('URI_PATH') && URI_PATH != '')
+		{
+			
+			$route['[a-zA-Z]*/(.*)'] = '$1';
+			$route['[a-zA-Z]*'] = $route['default_controller'];
+		}
+	}
+}
