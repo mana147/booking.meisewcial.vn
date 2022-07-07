@@ -2,8 +2,17 @@
 define('CUSTOM_CHECK_GLB', 'glb');
 
 
+/*
+ * --------------------------------------------------------------------
+ * LOAD THE GLOBAL CONFIG FILE
+ * --------------------------------------------------------------------
+ *
+ */
+
 require_once('cf/cfglb.php');
+
 require_once('cf/cf.php');
+
 /**
  * CodeIgniter
  *
@@ -296,13 +305,7 @@ switch (ENVIRONMENT)
 
 	define('VIEWPATH', $view_folder);
 
-/*
- * --------------------------------------------------------------------
- * LOAD THE GLOBAL CONFIG FILE
- * --------------------------------------------------------------------
- *
- */
-require_once('glb/cfglb.php');
+
 /*
  * --------------------------------------------------------------------
  * LOAD THE BOOTSTRAP FILE
