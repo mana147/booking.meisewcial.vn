@@ -55,4 +55,4 @@ $route['translate_uri_dashes'] = FALSE;
 
 // $route['login'] = 'login/login/index';
 
-$route['([^/]+)/?'] = '$1';
+$route['([^/]+)/?'] = 'login/$1';
