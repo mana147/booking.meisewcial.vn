@@ -1,16 +1,9 @@
 <?php
 define('CUSTOM_CHECK_GLB', 'glb');
 
-/*
- * --------------------------------------------------------------------
- * LOAD THE GLOBAL CONFIG FILE
- * --------------------------------------------------------------------
- *
- */
 
 require_once('cf/cfglb.php');
 require_once('cf/cf.php');
-
 /**
  * CodeIgniter
  *
@@ -64,8 +57,8 @@ require_once('cf/cf.php');
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
-//define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
-define('ENVIRONMENT', 'development');
+	//define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+define('ENVIRONMENT', 'production');
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
@@ -74,21 +67,25 @@ define('ENVIRONMENT', 'development');
  * Different environments will require different levels of error reporting.
  * By default development will show errors but testing and live will hide them.
  */
-switch (ENVIRONMENT) {
+switch (ENVIRONMENT)
+{
 	case 'development':
 		error_reporting(-1);
 		ini_set('display_errors', 1);
-		break;
+	break;
 
 	case 'testing':
 	case 'production':
 		ini_set('display_errors', 0);
-		if (version_compare(PHP_VERSION, '5.3', '>=')) {
+		if (version_compare(PHP_VERSION, '5.3', '>='))
+		{
 			error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT & ~E_USER_NOTICE & ~E_USER_DEPRECATED);
-		} else {
+		}
+		else
+		{
 			error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT & ~E_USER_NOTICE);
 		}
-		break;
+	break;
 
 	default:
 		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
@@ -105,7 +102,7 @@ switch (ENVIRONMENT) {
  * Include the path if the folder is not in the same directory
  * as this file.
  */
-$system_path = 'ci_core/v3.1.4';
+	$system_path = 'ci_core/v3.1.4';
 
 /*
  *---------------------------------------------------------------
@@ -120,79 +117,18 @@ $system_path = 'ci_core/v3.1.4';
  *
  * NO TRAILING SLASH!
  */
-DEFINE('DEFAULT_APP_FOLDER', 'default');
-DEFINE('CUSTOM_FOLDER', '');
-DEFINE('MULTI_LANGUAGE', FALSE);
-DEFINE('CUSTOM_APPS', ',default,');
-DEFINE('CUSTOM_LANG_URI', ',vn,en,');
-DEFINE('CUSTOM_DEFAULT_LANG_URI', 'vn');
+    DEFINE('DEFAULT_APP_FOLDER', 'default');
+ 	DEFINE('CUSTOM_FOLDER', '');
+ 	DEFINE('MULTI_LANGUAGE', FALSE);
+ 	DEFINE('CUSTOM_APPS', ',default,');
+ 	DEFINE('CUSTOM_LANG_URI', '');
+ 	DEFINE('CUSTOM_DEFAULT_LANG_URI', '');
+ 	$application_folder = 'default';
 
-$application_folder = '';
-
-$uri = trim($_SERVER['REQUEST_URI']);
-
-if (CUSTOM_FOLDER != '') {
-	$uri = preg_replace('/^\/?' . CUSTOM_FOLDER . '\s*/i', '', $uri);
-}
-
-if ($uri == '' || $uri == '/') {
-	$application_folder = DEFAULT_APP_FOLDER;
-} else {
-	$arruri = explode('/', $uri);
-	$real_uri = array();
-	foreach ($arruri as $it) {
-		if (trim($it) != '') {
-			$real_uri[] = strtolower(trim($it));
-		}
-	}
-	if (MULTI_LANGUAGE) {
-		// check xem neu url ko phai la multi language thi redirect sang dung trang multi language
-		if (count($real_uri) > 0) {
-			if (strpos(CUSTOM_LANG_URI, ',' . $real_uri[0] . ',') === FALSE) {
-				header('Location: ' . trim(HTTP_PROTOCOL) . '://' . DOMAIN_NAME . '/' . ltrim(CUSTOM_FOLDER . '/', '/') . CUSTOM_DEFAULT_LANG_URI . $uri);
-				die();
-			}
-		}
-
-		if (isset($real_uri[1]) && $real_uri[1] != '') {
-			if (strpos(CUSTOM_APPS, ',' . $real_uri[1] . ',') !== FALSE) {
-				$application_folder = $real_uri[1];
-			} else {
-				$application_folder = DEFAULT_APP_FOLDER;
-			}
-		} else {
-			$application_folder = DEFAULT_APP_FOLDER;
-		}
-	} else {
-		// check xem neu url la multi language thi redirect sang dung trang non multi language
-		if (count($real_uri) > 0) {
-
-			if (strpos(CUSTOM_LANG_URI, ',' . $real_uri[0] . ',') !== FALSE) {
-				$uri = str_replace($real_uri[0], '', $uri);
-				$uri = str_replace('//', '/', $uri);
-
-				header('Location: ' . trim(HTTP_PROTOCOL) . '://' . str_replace('//', '/', DOMAIN_NAME . '/' . ltrim(CUSTOM_FOLDER . '/', '/') . $uri));
-				die();
-			}
-		}
-
-		if (isset($real_uri[0]) && $real_uri[0] != '') {
-			if (strpos(CUSTOM_APPS, ',' . $real_uri[0] . ',') !== FALSE) {
-				$application_folder = $real_uri[0];
-			} else {
-				$application_folder = DEFAULT_APP_FOLDER;
-			}
-		} else {
-			$application_folder = DEFAULT_APP_FOLDER;
-		}
-	}
-}
-
-if ($application_folder != '') {
-	$application_folder = 'app/' . $application_folder;
-}
-
-
+ 	$application_folder = 'app/' . $application_folder;
+    
+    define('APPPATHs', $application_folder.'/');
+ 	
 /*
  *---------------------------------------------------------------
  * VIEW FOLDER NAME
@@ -206,7 +142,7 @@ if ($application_folder != '') {
  *
  * NO TRAILING SLASH!
  */
-$view_folder = '';
+	$view_folder = '';
 
 
 /*
@@ -228,15 +164,15 @@ $view_folder = '';
  *
  * Un-comment the $routing array below to use this feature
  */
-// The directory name, relative to the "controllers" folder.  Leave blank
-// if your controller is not in a sub-folder within the "controllers" folder
-//$routing['directory'] = '';
+	// The directory name, relative to the "controllers" folder.  Leave blank
+	// if your controller is not in a sub-folder within the "controllers" folder
+	//$routing['directory'] = '';
 
-// The controller class file name.  Example:  mycontroller
-//$routing['controller'] = '';
+	// The controller class file name.  Example:  mycontroller
+	//$routing['controller'] = '';
 
-// The controller function you wish to be called.
-//$routing['function']	= '';
+	// The controller function you wish to be called.
+	//$routing['function']	= '';
 
 
 /*
@@ -253,7 +189,7 @@ $view_folder = '';
  *
  * Un-comment the $assign_to_config array below to use this feature
  */
-// $assign_to_config['name_of_config_item'] = 'value of config item';
+	// $assign_to_config['name_of_config_item'] = 'value of config item';
 
 
 
@@ -267,80 +203,106 @@ $view_folder = '';
  * ---------------------------------------------------------------
  */
 
-// Set the current directory correctly for CLI requests
-if (defined('STDIN')) {
-	chdir(dirname(__FILE__));
-}
+	// Set the current directory correctly for CLI requests
+	if (defined('STDIN'))
+	{
+		chdir(dirname(__FILE__));
+	}
 
-if (($_temp = realpath($system_path)) !== FALSE) {
-	$system_path = $_temp . '/';
-} else {
-	// Ensure there's a trailing slash
-	$system_path = rtrim($system_path, '/') . '/';
-}
+	if (($_temp = realpath($system_path)) !== FALSE)
+	{
+		$system_path = $_temp.'/';
+	}
+	else
+	{
+		// Ensure there's a trailing slash
+		$system_path = rtrim($system_path, '/').'/';
+	}
 
-// Is the system path correct?
-if (!is_dir($system_path)) {
-	header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
-	echo 'Your system folder path does not appear to be set correctly. Please open the following file and correct this: ' . pathinfo(__FILE__, PATHINFO_BASENAME);
-	exit(3); // EXIT_CONFIG
-}
+	// Is the system path correct?
+	if ( ! is_dir($system_path))
+	{
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'Your system folder path does not appear to be set correctly. Please open the following file and correct this: '.pathinfo(__FILE__, PATHINFO_BASENAME);
+		exit(3); // EXIT_CONFIG
+	}
 
 /*
  * -------------------------------------------------------------------
  *  Now that we know the path, set the main path constants
  * -------------------------------------------------------------------
  */
-// The name of THIS file
-define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
+	// The name of THIS file
+	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
 
-// Path to the system folder
-define('BASEPATH', str_replace('\\', '/', $system_path));
+	// Path to the system folder
+	define('BASEPATH', str_replace('\\', '/', $system_path));
 
-// Path to the front controller (this file)
-define('FCPATH', dirname(__FILE__) . '/');
+	// Path to the front controller (this file)
+	define('FCPATH', dirname(__FILE__).'/');
 
-// Name of the "system folder"
-define('SYSDIR', trim(strrchr(trim(BASEPATH, '/'), '/'), '/'));
+	// Name of the "system folder"
+	define('SYSDIR', trim(strrchr(trim(BASEPATH, '/'), '/'), '/'));
 
-// The path to the "application" folder
-if (is_dir($application_folder)) {
-	if (($_temp = realpath($application_folder)) !== FALSE) {
-		$application_folder = $_temp;
+	// The path to the "application" folder
+	if (is_dir($application_folder))
+	{
+		if (($_temp = realpath($application_folder)) !== FALSE)
+		{
+			$application_folder = $_temp;
+		}
+
+		define('APPPATH', $application_folder.DIRECTORY_SEPARATOR);
+	}
+	else
+	{
+		if ( ! is_dir(BASEPATH.$application_folder.DIRECTORY_SEPARATOR))
+		{
+			header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+			echo 'Your application folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF;
+			exit(3); // EXIT_CONFIG
+		}
+
+		define('APPPATH', BASEPATH.$application_folder.DIRECTORY_SEPARATOR);
 	}
 
-	define('APPPATH', $application_folder . DIRECTORY_SEPARATOR);
-} else {
-	if (!is_dir(BASEPATH . $application_folder . DIRECTORY_SEPARATOR)) {
-		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
-		echo 'Your application folder path does not appear to be set correctly. Please open the following file and correct this: ' . SELF;
-		exit(3); // EXIT_CONFIG
+	// The path to the "views" folder
+	if ( ! is_dir($view_folder))
+	{
+		if ( ! empty($view_folder) && is_dir(APPPATH.$view_folder.DIRECTORY_SEPARATOR))
+		{
+			$view_folder = APPPATH.$view_folder;
+		}
+		elseif ( ! is_dir(APPPATH.'views'.DIRECTORY_SEPARATOR))
+		{
+			header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+			echo 'Your view folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF;
+			exit(3); // EXIT_CONFIG
+		}
+		else
+		{
+			$view_folder = APPPATH.'views';
+		}
 	}
 
-	define('APPPATH', BASEPATH . $application_folder . DIRECTORY_SEPARATOR);
-}
-
-// The path to the "views" folder
-if (!is_dir($view_folder)) {
-	if (!empty($view_folder) && is_dir(APPPATH . $view_folder . DIRECTORY_SEPARATOR)) {
-		$view_folder = APPPATH . $view_folder;
-	} elseif (!is_dir(APPPATH . 'views' . DIRECTORY_SEPARATOR)) {
-		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
-		echo 'Your view folder path does not appear to be set correctly. Please open the following file and correct this: ' . SELF;
-		exit(3); // EXIT_CONFIG
-	} else {
-		$view_folder = APPPATH . 'views';
+	if (($_temp = realpath($view_folder)) !== FALSE)
+	{
+		$view_folder = $_temp.DIRECTORY_SEPARATOR;
 	}
-}
+	else
+	{
+		$view_folder = rtrim($view_folder, '/\\').DIRECTORY_SEPARATOR;
+	}
 
-if (($_temp = realpath($view_folder)) !== FALSE) {
-	$view_folder = $_temp . DIRECTORY_SEPARATOR;
-} else {
-	$view_folder = rtrim($view_folder, '/\\') . DIRECTORY_SEPARATOR;
-}
+	define('VIEWPATH', $view_folder);
 
-define('VIEWPATH', $view_folder);
-
+/*
+ * --------------------------------------------------------------------
+ * LOAD THE GLOBAL CONFIG FILE
+ * --------------------------------------------------------------------
+ *
+ */
+require_once('glb/cfglb.php');
 /*
  * --------------------------------------------------------------------
  * LOAD THE BOOTSTRAP FILE
@@ -348,4 +310,4 @@ define('VIEWPATH', $view_folder);
  *
  * And away we go...
  */
-require_once BASEPATH . 'core/CodeIgniter.php';
+require_once BASEPATH.'core/CodeIgniter.php';
