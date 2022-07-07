@@ -54,4 +54,4 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 
-$route['[a-zA-Z]*/(.*)'] = 'login';
+$route['[a-zA-Z]*/(.*)'] = 'login/$1';
