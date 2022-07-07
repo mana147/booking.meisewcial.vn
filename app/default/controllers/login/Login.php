@@ -1,15 +1,19 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+if (!defined('BASEPATH'))
+    exit('No direct script access allowed');
 
-class Login extends MY_Controller{
+class Login extends MY_Controller
+{
 
     function __construct()
     {
-        $this->_module = trim(strtolower(__CLASS__));
+        $this->_module = trim(strtolower(__class__));
         parent::__construct();
     }
-    
+
     function index()
     {
-        echo "Login";
+        $data = [];
+        echo "login";
     }
 }
