@@ -193,8 +193,6 @@ if ($application_folder != '') {
 }
 
 
-var_dump($application_folder);die;
-
 /*
  *---------------------------------------------------------------
  * VIEW FOLDER NAME
