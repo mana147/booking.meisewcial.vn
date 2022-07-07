@@ -55,4 +55,5 @@ $route['translate_uri_dashes'] = FALSE;
 
 // $route['login'] = 'login/login/index';
 
-$route['([^/]+)/?'] = 'login/$1';
+$route['(.*)'] = '$1';
+$route[''] = $route['default_controller'];
