@@ -83,7 +83,4 @@ if(defined('MULTI_LANGUAGE'))
 		}
 	}
 
-
-	var_dump($route);
-
 }
