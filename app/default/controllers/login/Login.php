@@ -13,6 +13,7 @@ class Login extends MY_Controller
 
     function index()
     {
+        $this->_function = trim(strtolower(__FUNCTION__));
         echo "login";
     }
 }
