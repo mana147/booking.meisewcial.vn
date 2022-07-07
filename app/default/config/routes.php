@@ -53,8 +53,6 @@ $route['default_controller'] = 'dashboard/dashboard/index';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['login'] = 'login/login/index';
-
 if(defined('URI_PATH') && URI_PATH == '')
 {
 	$route['(.*)'] = '$1';

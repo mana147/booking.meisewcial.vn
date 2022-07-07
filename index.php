@@ -132,93 +132,10 @@ switch (ENVIRONMENT)
  	DEFINE('CUSTOM_APPS', ',default,');
  	DEFINE('CUSTOM_LANG_URI', '');
  	DEFINE('CUSTOM_DEFAULT_LANG_URI', '');
- 	$application_folder = '';
 
-	 $uri = trim($_SERVER['REQUEST_URI']);
-	 if(CUSTOM_FOLDER != '')
-	 {
-		 $uri = preg_replace('/^\/?'.CUSTOM_FOLDER.'\s*/i', '', $uri);
-	 }
-	 if($uri == '' || $uri == '/')
-	 {
-		 $application_folder = DEFAULT_APP_FOLDER;
-	 }
-	 else
-	 {
-		 $arruri = explode('/', $uri);
-		  $real_uri = array();
-		  foreach($arruri as $it)
-		  {
-			  if(trim($it) != '')
-			  {
-				  $real_uri[] = strtolower(trim($it));
-			  }
-		  }
-		  if(MULTI_LANGUAGE)
-		  {
-			  // check xem neu url ko phai la multi language thi redirect sang dung trang multi language
-			  if(count($real_uri) > 0)
-			  {
-				  if(strpos(CUSTOM_LANG_URI, ',' . $real_uri[0] . ',') === FALSE)
-				  {
-					  header('Location: ' . trim(HTTP_PROTOCOL) . '://' . DOMAIN_NAME . '/' . ltrim(CUSTOM_FOLDER . '/', '/') . CUSTOM_DEFAULT_LANG_URI . $uri);
-					  die();
-				  }
-			  }
- 
-			  if(isset($real_uri[1]) && $real_uri[1] != '')
-			  {
-				  if(strpos(CUSTOM_APPS, ',' . $real_uri[1] . ',') !== FALSE)
-				  {
-					  $application_folder = $real_uri[1];
-				  }
-				  else
-				  {
-					  $application_folder = DEFAULT_APP_FOLDER;
-				  }
-			  }
-			  else
-			  {
-				  $application_folder = DEFAULT_APP_FOLDER;
-			  }
-		  }
-		  else
-		  {
-			  // check xem neu url la multi language thi redirect sang dung trang non multi language
-			  if(count($real_uri) > 0)
-			  {
- 
-				  if(strpos(CUSTOM_LANG_URI, ',' . $real_uri[0] . ',') !== FALSE)
-				  {
-					  $uri = str_replace($real_uri[0], '', $uri);
-					  $uri = str_replace('//', '/', $uri);
- 
-					  header('Location: ' . trim(HTTP_PROTOCOL) . '://' . str_replace('//', '/', DOMAIN_NAME . '/' . ltrim(CUSTOM_FOLDER . '/', '/') . $uri));
-					  die();
-				  }
-			  }
- 
-			  if(isset($real_uri[0]) && $real_uri[0] != '')
-			  {
-				  if(strpos(CUSTOM_APPS, ',' . $real_uri[0] . ',') !== FALSE)
-				  {
-					  $application_folder = $real_uri[0];
-				  }
-				  else
-				  {
-					  $application_folder = DEFAULT_APP_FOLDER;
-				  }
-			  }
-			  else
-			  {
-				  $application_folder = DEFAULT_APP_FOLDER;
-			  }
-		  }
-	  }
-	  if($application_folder != '')
-	  {
-		  $application_folder = 'app/' . $application_folder;
-	  }
+ 	$application_folder = 'default';
+ 	$application_folder = 'app/' . $application_folder;
+ 	
 /*
  *---------------------------------------------------------------
  * VIEW FOLDER NAME
