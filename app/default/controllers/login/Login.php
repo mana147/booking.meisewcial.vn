@@ -16,4 +16,13 @@ class Login extends MY_Controller
         $this->_function = trim(strtolower(__FUNCTION__));
         echo "login";
     }
+
+    function test()
+    {
+        $this->_function = trim(strtolower(__FUNCTION__));
+        echo "test";
+    }
+
+
+    
 }
