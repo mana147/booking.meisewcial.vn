@@ -82,4 +82,8 @@ if(defined('MULTI_LANGUAGE'))
 			$route['[a-zA-Z]*'] = $route['default_controller'];
 		}
 	}
+
+
+	showLOG($route);die;
+	
 }
