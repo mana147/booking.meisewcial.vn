@@ -84,6 +84,6 @@ if(defined('MULTI_LANGUAGE'))
 	}
 
 
-	showLOG($route);die;
-	
+	var_dump($route);
+
 }
