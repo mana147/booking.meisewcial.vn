@@ -131,8 +131,6 @@ $application_folder = '';
 
 $uri = trim($_SERVER['REQUEST_URI']);
 
-var_dump($uri);die;
-
 if (CUSTOM_FOLDER != '') {
 	$uri = preg_replace('/^\/?' . CUSTOM_FOLDER . '\s*/i', '', $uri);
 }
@@ -193,6 +191,9 @@ if ($uri == '' || $uri == '/') {
 if ($application_folder != '') {
 	$application_folder = 'app/' . $application_folder;
 }
+
+
+var_dump($application_folder);die;
 
 /*
  *---------------------------------------------------------------
