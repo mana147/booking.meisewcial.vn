@@ -7,9 +7,7 @@
     Options +FollowSymlinks
 	RewriteEngine On 
 	RewriteBase /
-	
-	RewriteRule ^admin/?(.*)$ adpanel/$1 [L,NC]
-	
+
 	#comment if dev on local
 	#RewriteCond %{HTTPS}  off
 	#RewriteRule ^(.*)$ https://phonglanhanoi.com/$1 [R=302,L]
@@ -18,6 +16,6 @@
  	RewriteCond %{REQUEST_FILENAME} !-d
     
    	RewriteRule ^(.*)$ index.php/$1 [L,NC]
-   	
 	RewriteRule upgrade$ upgrade\.php [L,NC]
+	
 </IfModule>
