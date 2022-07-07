@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -53,34 +53,22 @@ $route['default_controller'] = 'dashboard/dashboard/index';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-if(defined('MULTI_LANGUAGE'))
-{
-	if(MULTI_LANGUAGE)
-	{
-		if(defined('URI_PATH') && URI_PATH == '')
-		{
+if (defined('MULTI_LANGUAGE')) {
+	if (MULTI_LANGUAGE) {
+		if (defined('URI_PATH') && URI_PATH == '') {
 			$route['(\w{2})/(.*)'] = '$2';
 			$route['(\w{2})'] = $route['default_controller'];
-		}
-		else if(defined('URI_PATH') && URI_PATH != '')
-		{
+		} else if (defined('URI_PATH') && URI_PATH != '') {
 			$route['(\w{2})/[a-zA-Z]*/(.*)'] = '$2';
 			$route['(\w{2})/[a-zA-Z]*'] = $route['default_controller'];
 		}
-	}
-	else
-	{
-		if(defined('URI_PATH') && URI_PATH == '')
-		{
+	} else {
+		if (defined('URI_PATH') && URI_PATH == '') {
 			$route['(.*)'] = '$1';
 			$route[''] = $route['default_controller'];
-		}
-		else if(defined('URI_PATH') && URI_PATH != '')
-		{
-			
+		} else if (defined('URI_PATH') && URI_PATH != '') {
 			$route['[a-zA-Z]*/(.*)'] = '$1';
 			$route['[a-zA-Z]*'] = $route['default_controller'];
 		}
 	}
-
 }

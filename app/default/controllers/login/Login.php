@@ -13,7 +13,6 @@ class Login extends MY_Controller
 
     function index()
     {
-        $data = [];
         echo "login";
     }
 }
