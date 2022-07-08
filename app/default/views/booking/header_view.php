@@ -1,48 +1,25 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
-	<base href="<?php echo base_url(); ?>" />
-	<title> Booking </title>
 
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta http-equiv="Content-Type" content="application/vnd.ms-excel; charset=UTF-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-	<meta name="title" content="Booking" />
-	<meta name="keywords" content="Booking" />
-	<meta name="description" content="Booking" />
+    <title>Dashboard - Booking</title>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+    <!-- Custom fonts for this template-->
+    <link href="template/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-	<!-- script  -->
-	<script type="text/javascript">
-
-	</script>
-
-	<!-- style -->
-	<style>
-		html,
-		body,
-		h1,
-		h2,
-		h3,
-		h4,
-		h5 {
-			font-family: "Raleway", sans-serif
-		}
-	</style>
+    <!-- Custom styles for this template-->
+    <link href="template/css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
 <?php flush(); ?>
-
-<body>
