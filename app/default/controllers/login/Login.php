@@ -14,15 +14,10 @@ class Login extends MY_Controller
     function index()
     {
         $this->_function = trim(strtolower(__FUNCTION__));
-        echo "login";
-    }
 
-    function test()
-    {
-        $this->_function = trim(strtolower(__FUNCTION__));
-        echo "test";
-    }
-
-
-    
+        $data = [];
+        $this->_loadHeader();
+        $this->load->view($this->_template_f.'login/login_view');
+        $this->_loadFooter();
+    }    
 }
