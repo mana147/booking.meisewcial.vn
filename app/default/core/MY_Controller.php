@@ -55,11 +55,6 @@ class MY_Controller extends CI_Controller
     protected function _loadHeader($data = null, $isLoadHeader = true)
     {
         $header = array();
-        $header['title'] = isset($data['title']) ? $data['title'] : '';
-        $header['metaTitle'] = isset($data['metaTitle']) ? $data['metaTitle'] : '';
-        $header['metaKeyword'] = isset($data['metaKeyword']) ? $data['metaKeyword'] : '';
-        $header['metaDesc'] = isset($data['metaDesc']) ? $data['metaDesc'] : '';
-        $header['isLoadHeader'] = $isLoadHeader;
 
         // load header
         $this->load->view($this->_template_f . 'header_view', $header);
