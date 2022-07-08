@@ -11,11 +11,6 @@ class Landing extends MY_Controller {
     function index()
     {
 		$data = [];
-
-		echo "Landing";
-
-        // $this->_loadHeader();
-        // $this->load->view($this->_template_f . 'dashboard/dashboard_view', $data);
-        // $this->_loadFooter();
+        $this->load->view($this->_template_f . 'landing/landing_view.php', $data);
     }
 }
