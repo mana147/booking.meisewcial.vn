@@ -55,5 +55,5 @@ $route['default_controller'] = 'landing/landing/index';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['([^/]+)/?'] = 'dashboard/dashboard/index';
-// $route['([^/]+)/?'] = 'login/login/index';
+$route['dashboard'] = 'dashboard/dashboard/index';
+$route['login'] = 'login/login/index';
