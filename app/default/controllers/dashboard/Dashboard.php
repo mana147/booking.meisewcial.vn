@@ -12,7 +12,7 @@ class Dashboard extends MY_Controller {
     function index() {        
         $data = [];
         // $this->_loadHeader();
-        $this->load->view(base_url().'startbootstrap-sb-admin-2/dashboard');
+        $this->load->view('startbootstrap-sb-admin-2/dashboard');
         // $this->_loadFooter();
     }
     
