@@ -52,7 +52,7 @@
         <div class="container">
 
             <div class="text-center">
-                <h2 class="section-heading text-uppercase">Mei Sewcial House </h2>
+                <h2 class="section-heading text-uppercase">Mei Sewcial</h2>
                 <h3 class="section-subheading text-muted">ann.interior@gmail.com</h3>
             </div>
 
