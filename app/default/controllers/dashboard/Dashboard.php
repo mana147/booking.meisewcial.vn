@@ -12,8 +12,10 @@ class Dashboard extends MY_Controller {
     function index() {        
         $data = [];
         // $this->_loadHeader();
-        $this->load->view('booking/dashboard/dashboard_view', $data);
+        $this->load->view('booking/dashboard/dashboard_view');
         // $this->_loadFooter();
+
+        echo base_url();
     }
     
 }
