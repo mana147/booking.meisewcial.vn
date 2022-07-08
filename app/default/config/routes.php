@@ -56,4 +56,4 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['([^/]+)/?'] = 'dashboard/dashboard/index';
-$route['([^/]+)/?'] = 'login/login/index';
+// $route['([^/]+)/?'] = 'login/login/index';
