@@ -91,7 +91,7 @@
 
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
-                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                    <p class="large text-muted">Pole Dancing (múa cột) khi lột bỏ hoàn toàn lớp mặt nạ “vịt con xấu xí” của mình sẽ để lộ ra trái tim thuần khiết, đẹp đẽ và đầy nghệ thuật của một con thiên nga đích thực.</p>
                 </div>
             </div>
 
