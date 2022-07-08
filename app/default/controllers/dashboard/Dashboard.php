@@ -15,7 +15,7 @@ class Dashboard extends MY_Controller {
         // $this->load->view('booking/dashboard/dashboard_view');
         // $this->_loadFooter();
 
-        echo base_url();
+        echo base_url().'startbootstrap-sb-admin-2/css/sb-admin-2.css';
     }
     
 }
