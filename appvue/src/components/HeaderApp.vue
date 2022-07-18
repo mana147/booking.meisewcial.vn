@@ -1,0 +1,63 @@
+<!-- ***************************** Template **************************-->
+<template>
+    <div class="header">
+        <h1 style="margin:5px">My To Do List</h1>
+        <input type="text"  placeholder="Title...">
+        <span class="addBtn">Add</span>
+    </div>
+</template>
+
+<!-- ***************************** Script *************************** -->
+<script>
+
+export default {
+    name: 'HeaderApp',
+};
+</script>
+
+<!-- ****************************** Style **************************** -->
+<style scoped>
+/* Style the header */
+.header {
+  background-color: #f44336;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 21%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+</style>
