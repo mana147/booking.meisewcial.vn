@@ -11,6 +11,11 @@ class Dashboard extends MY_Controller {
 
     function index() {        
         $data = [];
+
+        var_dump("ok");
+        die;
+
+
         $this->_loadHeader();
         $this->load->view($this->_template_f.'dashboard/dashboard_view');
         $this->_loadFooter();
