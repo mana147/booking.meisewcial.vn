@@ -13,7 +13,6 @@ class Dashboard extends MY_Controller {
         $data = [];
 
         var_dump("ok");
-        die;
 
 
         $this->_loadHeader();
