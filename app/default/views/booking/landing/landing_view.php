@@ -247,6 +247,7 @@
 
                 init: function(themeSystem) {
                     calendar = new FullCalendar.Calendar(calendarEl, {
+                        height: '100%',
                         themeSystem: themeSystem,
                         headerToolbar: {
                             left: 'prev,next today',
