@@ -12,7 +12,7 @@ class Dashboard extends MY_Controller {
     function index() {        
         $data = [];
 
-        var_dump($_SESSION);die;
+        // var_dump($_SESSION);die;
 
         $this->_loadHeader();
         $this->load->view($this->_template_f.'dashboard/dashboard_view');
