@@ -110,63 +110,6 @@
 
     <!-- Calendar full -->
 
-    <div id='top' style="display: none;">
-
-        <div class='left'>
-
-            <div id='theme-system-selector' class='selector'>
-                Theme System:
-                <select>
-                    <option value='bootstrap5' selected>Bootstrap 5</option>
-                    <option value='bootstrap'>Bootstrap 4</option>
-                    <option value='standard'>unthemed</option>
-                </select>
-            </div>
-
-            <div data-theme-system="bootstrap,bootstrap5" class='selector' style='display:none'>
-                Theme Name:
-                <select>
-                    <option value='' selected>Default</option>
-                    <option value='cerulean'>Cerulean</option>
-                    <option value='cosmo'>Cosmo</option>
-                    <option value='cyborg'>Cyborg</option>
-                    <option value='darkly'>Darkly</option>
-                    <option value='flatly'>Flatly</option>
-                    <option value='journal'>Journal</option>
-                    <option value='litera'>Litera</option>
-                    <option value='lumen'>Lumen</option>
-                    <option value='lux'>Lux</option>
-                    <option value='materia'>Materia</option>
-                    <option value='minty'>Minty</option>
-                    <option value='pulse'>Pulse</option>
-                    <option value='sandstone'>Sandstone</option>
-                    <option value='simplex'>Simplex</option>
-                    <option value='sketchy'>Sketchy</option>
-                    <option value='slate'>Slate</option>
-                    <option value='solar'>Solar</option>
-                    <option value='spacelab'>Spacelab</option>
-                    <option value='superhero'>Superhero</option>
-                    <option value='united'>United</option>
-                    <option value='yeti'>Yeti</option>
-                </select>
-            </div>
-
-            <span id='loading' style='display:none'>loading theme...</span>
-
-        </div>
-
-        <div class='right'>
-            <span class='credits' data-credit-id='bootstrap-standard' style='display:none'>
-                <a href='https://getbootstrap.com/docs/3.3/' target='_blank'>Theme by Bootstrap</a>
-            </span>
-            <span class='credits' data-credit-id='bootstrap-custom' style='display:none'>
-                <a href='https://bootswatch.com/' target='_blank'>Theme by Bootswatch</a>
-            </span>
-        </div>
-
-        <div class='clear'></div>
-    </div>
-
     <div id='calendar'></div>
 
     <!-- Team-->
