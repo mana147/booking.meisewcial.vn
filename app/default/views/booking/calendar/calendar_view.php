@@ -161,11 +161,11 @@
 
 <body>
 
-    <div id='top'>
+    <div id='top' style="display: none;"  >
 
         <div class='left'>
 
-            <div style="display: none;"  id='theme-system-selector' class='selector'>
+            <div  id='theme-system-selector' class='selector'>
                 Theme System:
                 <select>
                     <option value='bootstrap5' selected>Bootstrap 5</option>
