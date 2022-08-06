@@ -165,7 +165,7 @@
 
         <div class='left'>
 
-            <div id='theme-system-selector' class='selector'>
+            <div style="display: none;"  id='theme-system-selector' class='selector'>
                 Theme System:
                 <select>
                     <option value='bootstrap5' selected>Bootstrap 5</option>
