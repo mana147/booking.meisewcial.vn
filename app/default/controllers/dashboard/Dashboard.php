@@ -2,26 +2,31 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-class Dashboard extends MY_Controller {
+class Dashboard extends MY_Controller
+{
 
-    function __construct() {
+    function __construct()
+    {
         $this->_module = trim(strtolower(__class__));
         parent::__construct();
 
         $this->load->model('user/User_models');
     }
 
-    function index() {        
+    function index()
+    {
         $data = [];
-
-        // var_dump($_SESSION);die;
 
         $this->User_models->get_info_user();
 
 
+        die;
+
+        var_dump($_SESSION);die;
+
+
         $this->_loadHeader();
-        $this->load->view($this->_template_f.'dashboard/dashboard_view');
+        $this->load->view($this->_template_f . 'dashboard/dashboard_view');
         $this->_loadFooter();
     }
-    
 }
