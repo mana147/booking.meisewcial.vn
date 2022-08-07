@@ -30,8 +30,12 @@ class User_models extends CI_Model
         if ($result->num_rows > 0) {
             // output data of each row
             while ($row = $result->fetch_assoc()) {
-                echo "row: " . $row;
+                // echo "row: " . $row;
+
+                var_dump( $row);
+                
             }
+
         } else {
             echo "0 results";
         }
