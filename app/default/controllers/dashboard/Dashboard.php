@@ -27,9 +27,6 @@ class Dashboard extends MY_Controller
 
         showLOG($_SESSION);
 
-
-        // $this->User_models->get_info_user();
-
         die;
 
 

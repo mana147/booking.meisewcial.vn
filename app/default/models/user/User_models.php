@@ -13,15 +13,16 @@ class User_models extends CI_Model
 
         $this->load->database();
 
-        $query = $this->db->query("SELECT * FROM `wp_users`");
+        $query = $this->db->query("SELECT * FROM `booking_users`");
 
         foreach ($query->result() as $row) {
-            var_dump($row);
+            showLOG($row);
         }
 
         echo 'Total Results: ' . $query->num_rows();
         
 
+        die;
 
         // $servername = "localhost";
         // $username = "nugfhltmhosting_meisewcial";

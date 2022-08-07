@@ -7,6 +7,8 @@ class User extends MY_Controller
     {
         $this->_module = trim(strtolower(__class__));
         parent::__construct();
+
+        $this->load->model('user/User_models');
     }
 
     // ----------------------------------------------------------------
@@ -16,21 +18,33 @@ class User extends MY_Controller
     {
         $this->_function = trim(strtolower(__FUNCTION__));
 
-
+        // get post ;
         $user_email = trim(removeAllTags($this->input->post('user_email')));
         $user_password = trim(removeAllTags($this->input->post('user_password')));
-        
         $user_password = md5($user_password);
-        
-        // unset all session before init
-        session_unset();
-        session_regenerate_id(true);
 
-        $this->session->set_userdata('user_email', $user_email);
-        $this->session->set_userdata('user_password', $user_password);
+        // check in database
+
+        $user_info = $this->User_models->get_info_user($user_email, $user_password);
+
+        if ($user_info) {
+
+            // unset all session before init
+            session_unset();
+            session_regenerate_id(true);
+            // add info to session
+            $this->session->set_userdata('user_email', $user_email);
+            $this->session->set_userdata('user_password', $user_password);
 
 
-        redirect('/dashboard', 'refresh');
+            // redirect to dashboard
+            redirect('/dashboard', 'refresh');
+            
+        } else {
+            redirect('/login', 'refresh');
+            die();
+        }
+
     }
 
 
