@@ -6,23 +6,23 @@ class User_models extends CI_Model
     public function __construct()
     {
         parent::__construct();
+        $this->load->database();
     }
 
     function get_info_user($user_email, $user_password)
     {
-
         showLOG([$user_email, $user_password]);
 
-        $this->load->database();
 
-        $query = $this->db->query("SELECT * FROM `booking_users`");
+
+        $query = $this->db->get('booking_users');  // Produces: SELECT
 
         foreach ($query->result() as $row) {
             showLOG($row);
         }
 
         echo 'Total Results: ' . $query->num_rows();
-        
+
 
         die;
 
