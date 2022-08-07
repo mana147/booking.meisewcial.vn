@@ -81,7 +81,7 @@ class User extends MY_Controller
     {
         $this->_function = trim(strtolower(__FUNCTION__));
         $this->session->sess_destroy();
-        redirect('login');
+        redirect('/');
     }
     
 }
