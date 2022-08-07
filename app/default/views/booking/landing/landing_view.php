@@ -95,6 +95,7 @@
 
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link"> <?php echo $info_user_email ?> </a> </li>
+                        <li class="nav-item"><a class="nav-link" href="https://booking.meisewcial.vn/dashboard">Dashboard</a></li>
                         <li class="nav-item"><a class="nav-link" href="https://booking.meisewcial.vn/logout">Log Out</a></li>
                     </ul>
 
