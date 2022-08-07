@@ -13,7 +13,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Booking<sup>v0.1</sup></div>
+                <div class="sidebar-brand-text mx-3">Booking<sup>0.1</sup></div>
             </a>
 
             <!-- Divider -->
@@ -259,7 +259,7 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $info_user_email ?></span>
                                 <img class="img-profile rounded-circle" src="template/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
