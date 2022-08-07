@@ -33,9 +33,9 @@ class User_models extends CI_Model
                     showLOG($info);
 
                 } else {
-                    echo 'error password ';
+                    echo 'error password';
                 }
-                
+
             } else {
                 echo 'error user';
             }
