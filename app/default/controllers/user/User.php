@@ -35,7 +35,7 @@ class User extends MY_Controller
 
             $this->session->set_userdata('user_id', $user_info['ID']);
             $this->session->set_userdata('user_email', $user_info['user_email']);
-            $this->session->set_userdata('user_nicename', $$user_info['user_nicename']);
+            $this->session->set_userdata('user_nicename', $user_info['user_nicename']);
 
 
             echo "ok";
