@@ -10,7 +10,14 @@ class Landing extends MY_Controller {
 
     function index()
     {
-		$data = [];
-        $this->load->view($this->_template_f . 'landing/landing_view.php', $data);
+
+		$data_view = [];
+
+		if ($this->_isLogin()) {
+			$data_view['info_user_email'] = $_SESSION['user_email'];
+			$data_view['info_user_nicename'] = $_SESSION['user_nicename'];
+        }
+
+        $this->load->view($this->_template_f . 'landing/landing_view.php', $data_view);
     }
 }

@@ -90,10 +90,22 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="https://booking.meisewcial.vn/login">Login</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://booking.meisewcial.vn/register">Register</a></li>
-                </ul>
+
+                <?php if (isset($info_user_email)) { ?>
+
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><?php echo $info_user_email ?></li>
+                    </ul>
+
+                <?php } else { ?>
+
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="https://booking.meisewcial.vn/login">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://booking.meisewcial.vn/register">Register</a></li>
+                    </ul>
+
+                <?php } ?>
+
             </div>
         </div>
     </nav>
