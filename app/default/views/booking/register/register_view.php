@@ -87,8 +87,7 @@
 
                                 </div>
 
-                                <!-- <a href="login.html" class="btn btn-primary btn-user btn-block"> Register Account </a> -->
-                                <input class="btn btn-primary btn-user btn-block" type="submit" value="Register Account" name="login">
+                                <input class="btn btn-primary btn-user btn-block" type="submit" value="Register Account">
 
                                 <hr>
 
