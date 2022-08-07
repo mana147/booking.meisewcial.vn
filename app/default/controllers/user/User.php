@@ -16,7 +16,14 @@ class User extends MY_Controller
     {
         $this->_function = trim(strtolower(__FUNCTION__));
 
-        var_dump($_POST);
+        $user_email = trim(removeAllTags($this->input->post('user_email')));
+        $user_password = trim(removeAllTags($this->input->post('user_password')));
+        
+        var_dump([$user_email,$user_password ]);
+    
+
+
+        // redirect('/dashboard', 'refresh');
         
     }
 
