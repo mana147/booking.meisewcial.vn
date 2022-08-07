@@ -19,8 +19,8 @@ class User_models extends CI_Model
 
         foreach ($query->result() as $row) {
 
-            echo $row['user_pass'];
-            // showLOG($row['user_pass']);
+            // echo $row['user_pass'];
+            showLOG($row);
         }
 
         echo 'Total Results: ' . $query->num_rows();
