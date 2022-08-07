@@ -1,6 +1,6 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class User_model extends CI_Model
+class User_models extends CI_Model
 {
 
     public function __construct()
@@ -12,7 +12,7 @@ class User_model extends CI_Model
     {
 
         echo "get info user";
-        
+
         // $db = $this->load->database();
 
         // if ($db) {
