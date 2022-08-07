@@ -10,13 +10,18 @@ class User_models extends CI_Model
 
     function get_info_user()
     {
-        $db = $this->load->database();
 
-        if ($db) {
-            echo " ok";
-        } else {
-            echo "fail";
+        $servername = "localhost";
+        $username = "nugfhltmhosting_meisewcial";
+        $password = "B?37XHO-_9]^";
+
+        // Create connection
+        $conn = new mysqli($servername, $username, $password);
+
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
         }
-
+        echo "Connected successfully";
     }
 }
