@@ -12,26 +12,22 @@ class Dashboard extends MY_Controller
 
         $this->load->model('user/User_models');
 
-        if (!$this->_isLogin())
-        {
+        if (!$this->_isLogin()) {
             redirect('/login', 'refresh');
             die();
         }
-
     }
 
     function index()
     {
-        $data = [];
-        echo " Dashboard > ";
+        $data_view = [];
 
-        showLOG($_SESSION);
-
-        die;
+        $data_view['info_user_email'] = $_SESSION['user_email'];
+        $data_view['info_user_nicename'] = $_SESSION['user_nicename'];
 
 
         $this->_loadHeader();
-        $this->load->view($this->_template_f . 'dashboard/dashboard_view');
+        $this->load->view($this->_template_f . 'dashboard/dashboard_view' , $data_view);
         $this->_loadFooter();
     }
 }
