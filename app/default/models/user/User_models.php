@@ -23,17 +23,14 @@ class User_models extends CI_Model
 
         if ($query) {
 
-            $info =  $query->result_array();
+            $info = $query->result_array();
 
-            if ($info) {
-
+            if ($info && ( $user_password == $info['user_pass'] ) ) {
                 echo 'has user';
                 showLOG($info);
-
             } else {
                 echo 'nots user';
             }
-
 
         } else {
             echo 'nots user';
