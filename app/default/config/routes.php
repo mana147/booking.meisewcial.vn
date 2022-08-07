@@ -61,11 +61,11 @@ $route['calendar'] = 'calendar/calendar/index';
 $route['register'] = 'user/user/register_view';
 $route['login'] = 'user/user/login_view';
 
+$route['login_user'] = 'user/user/login_user';
+
 
 // $route['register'] = 'user/register';
-// $route['login'] = 'user/login';
 // $route['logout'] = 'user/logout';
-
 // $route['user'] = 'user/login/index';
 
 

@@ -22,7 +22,7 @@
                                     </div>
 
                                     <!-- begin form ('user/register_user')  -->
-                                    <form role="form" method="post" action="<?php echo base_url('user/register_user'); ?>">
+                                    <form role="form" method="post" action="<?php echo base_url('login_user'); ?>">
                                         
                                     <div class="form-group">
                                             <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
