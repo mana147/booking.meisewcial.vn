@@ -94,7 +94,8 @@
                 <?php if (isset($info_user_email)) { ?>
 
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><?php echo $info_user_email ?></li>
+                        <li class="nav-item"><a class="nav-link"> <?php echo $info_user_email ?> </a> </li>
+                        <li class="nav-item"><a class="nav-link" href="https://booking.meisewcial.vn/register">Log Out</a></li>
                     </ul>
 
                 <?php } else { ?>
