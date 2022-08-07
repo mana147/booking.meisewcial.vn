@@ -19,17 +19,14 @@ class User extends MY_Controller
 
         $user_email = trim(removeAllTags($this->input->post('user_email')));
         $user_password = trim(removeAllTags($this->input->post('user_password')));
-
+        
         $user_password = md5($user_password);
-
-
-        // var_dump([$user_email, $user_password]);
-
+        
         // unset all session before init
         session_unset();
         session_regenerate_id(true);
 
-        $this->session->set_userdata('userid', $user_email);
+        $this->session->set_userdata('user_email', $user_email);
         $this->session->set_userdata('user_password', $user_password);
 
 

@@ -11,6 +11,13 @@ class Dashboard extends MY_Controller
         parent::__construct();
 
         $this->load->model('user/User_models');
+
+        if (!$this->_isLogin())
+        {
+            redirect('/login', 'refresh');
+            die();
+        }
+
     }
 
     function index()
