@@ -25,7 +25,7 @@ class User_models extends CI_Model
 
                 if ($user_password ==  $info[0]['user_pass']) {
 
-                    return $info;
+                    return $info[0];
 
                 } else {
                     return false;
