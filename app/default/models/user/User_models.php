@@ -29,18 +29,17 @@ class User_models extends CI_Model
 
                 if ($user_password ==  $info[0]['user_pass']) {
 
-                    echo 'has user';
-                    showLOG($info);
+                    return $info;
 
                 } else {
-                    echo 'error password';
+                    return false;
+                    // echo 'error password';
                 }
 
             } else {
-                echo 'error user';
+                return false;
+                // echo 'error user';
             }
         }
-
-        die;
     }
 }

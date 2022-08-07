@@ -24,10 +24,15 @@ class User extends MY_Controller
         $user_password = md5($user_password);
 
         // check in database
-
         $user_info = $this->User_models->get_info_user($user_email, $user_password);
 
         if ($user_info) {
+
+            echo 'user_info';
+
+            showLOG($user_info);
+            
+            die;
 
             // unset all session before init
             session_unset();
@@ -39,7 +44,7 @@ class User extends MY_Controller
 
             // redirect to dashboard
             redirect('/dashboard', 'refresh');
-            
+
         } else {
             redirect('/login', 'refresh');
             die();
