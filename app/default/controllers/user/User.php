@@ -29,7 +29,7 @@ class User extends MY_Controller
         session_unset();
         session_regenerate_id(true);
 
-        $this->session->set_userdata('user_email', $user_email);
+        $this->session->set_userdata('userid', $user_email);
         $this->session->set_userdata('user_password', $user_password);
 
 

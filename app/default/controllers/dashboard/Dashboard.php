@@ -18,10 +18,10 @@ class Dashboard extends MY_Controller
         $data = [];
         echo " Dashboard > ";
 
-        var_dump($_SESSION);
+        showLOG($_SESSION);
 
 
-        $this->User_models->get_info_user();
+        // $this->User_models->get_info_user();
 
         die;
 
