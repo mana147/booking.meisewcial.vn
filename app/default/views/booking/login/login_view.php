@@ -39,9 +39,11 @@
                                             </div>
                                         </div>
 
-                                        <a href="index.html" class="btn btn-primary btn-user btn-block">
+                                        <!-- <a href="index.html" class="btn btn-primary btn-user btn-block">
                                             Login
-                                        </a>
+                                        </a> -->
+
+                                        <input class="btn btn-primary btn-user btn-block" type="submit" value="login" name="login" >
                                         
                                         <!-- <hr> -->
 
