@@ -7,7 +7,7 @@ if (!defined('CUSTOM_CHECK_GLB'))
 else
 {
 	// define http protocol
-	define('HTTP_PROTOCOL', 'http');
+	define('HTTP_PROTOCOL', 'https');
 
     define('DB_MASTER_HOST', 'localhost');
 	define('DB_MASTER_USER', 'nugfhltmhosting_meisewcial');

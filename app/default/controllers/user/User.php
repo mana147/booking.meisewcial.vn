@@ -16,7 +16,8 @@ class User extends MY_Controller
     {
         $this->_function = trim(strtolower(__FUNCTION__));
 
-        echo "login_user";
+        var_dump($_POST);
+        
     }
 
 
