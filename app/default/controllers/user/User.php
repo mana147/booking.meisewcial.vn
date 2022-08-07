@@ -28,18 +28,14 @@ class User extends MY_Controller
 
         if ($user_info) {
 
-            echo 'user_info';
-
-            showLOG($user_info);
-            
-            die;
-
             // unset all session before init
             session_unset();
             session_regenerate_id(true);
             // add info to session
-            $this->session->set_userdata('user_email', $user_email);
-            $this->session->set_userdata('user_password', $user_password);
+
+            $this->session->set_userdata('user_id', $user_info['ID']);
+            $this->session->set_userdata('user_email', $user_info['user_email']);
+            $this->session->set_userdata('user_nicename', $$user_info['user_nicename']);
 
 
             // redirect to dashboard
