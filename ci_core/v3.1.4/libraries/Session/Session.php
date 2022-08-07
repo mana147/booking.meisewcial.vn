@@ -1109,6 +1109,8 @@ class CI_Session {
 	 */
 	public function unset_userdata($key)
 	{
+		$this->_session_last_regenerate_update();// toannh set
+		
 		if($this->_valid_cookie_name())
 		{
 			if (is_array($key))
@@ -1400,4 +1402,9 @@ class CI_Session {
 		session_regenerate_id(true);
 	}
 	// end add by toannh
+
+	function _session_last_regenerate_update()
+	{
+		$_SESSION['__ci_last_regenerate'] = time();
+	}
 }

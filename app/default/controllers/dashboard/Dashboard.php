@@ -17,9 +17,9 @@ class Dashboard extends MY_Controller
     {
         $data = [];
 
-        $this->User_models->get_info_user();
+        // $this->User_models->get_info_user();
         
-        die;
+        // die;
 
         var_dump($_SESSION);die;
 

@@ -16,15 +16,21 @@ class User extends MY_Controller
     {
         $this->_function = trim(strtolower(__FUNCTION__));
 
+
         $user_email = trim(removeAllTags($this->input->post('user_email')));
         $user_password = trim(removeAllTags($this->input->post('user_password')));
-        
-        var_dump([$user_email,$user_password ]);
-    
 
+        // var_dump([$user_email, $user_password]);
 
-        // redirect('/dashboard', 'refresh');
-        
+        // unset all session before init
+        session_unset();
+        session_regenerate_id(true);
+
+        $this->session->set_userdata('user_email', $user_email);
+        $this->session->set_userdata('user_password', $user_password);
+
+        redirect('/dashboard', 'refresh');
+
     }
 
 
