@@ -1,6 +1,6 @@
 <?php
 
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
   | -------------------------------------------------------------------
@@ -79,7 +79,7 @@ $query_builder = TRUE;
 
 
 $db['default'] = array(
-    'dsn' => 'mysql:host=' . DB_MASTER_HOST . ';dbname=' . DB_MASTER_DBNAME,
+    'dsn' => '',
     'hostname' => DB_MASTER_HOST,
     'username' => DB_MASTER_USER,
     'password' => DB_MASTER_PASS,
@@ -90,8 +90,8 @@ $db['default'] = array(
     'db_debug' => (ENVIRONMENT !== 'production'),
     'cache_on' => FALSE,
     'cachedir' => '',
-    	'char_set' => 'latin1',
-	'dbcollat' => 'latin1_swedish_ci',
+    'char_set' => 'utf8',
+    'dbcollat' => 'utf8_general_ci',
     'swap_pre' => '',
     'encrypt' => FALSE,
     'compress' => FALSE,
