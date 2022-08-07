@@ -67,7 +67,7 @@ class MY_Controller extends CI_Controller
 
     protected function _session_uid()
     {
-        $user_id = trim($this->session->userdata('userid'));
+        $user_id = trim($this->session->userdata('user_id'));
         $user_id = isIdNumber($user_id) ? $user_id : 0;
         return $user_id;
     }
@@ -95,11 +95,11 @@ class MY_Controller extends CI_Controller
     protected function _isLogin()
     {
         $user_email = $this->_session_user_email();
-        return ($user_email != '') ? true : false;
-
-        // $user_id = $this->_session_uid();
+        $user_id = $this->_session_uid();
+        
         // $firstname = $this->_session_fullname();
-        // return ($user_id > 0 && $firstname != '') ? true : false;
+
+        return ($user_id > 0 && $user_email != '') ? true : false;
     }
 
     protected function _isPost()
