@@ -10,8 +10,8 @@ else
 	define('HTTP_PROTOCOL', 'http');
 
     define('DB_MASTER_HOST', 'localhost');
-	define('DB_MASTER_USER', 'nugfhltmhosting_booking');
-	define('DB_MASTER_PASS', 'Hieu761321');
-	define('DB_MASTER_DBNAME', 'nugfhltmhosting_booking');
+	define('DB_MASTER_USER', 'nugfhltmhosting_meisewcial');
+	define('DB_MASTER_PASS', 'B?37XHO-_9]^');
+	define('DB_MASTER_DBNAME', 'nugfhltmhosting_meisewcial');
 }
 ?>
