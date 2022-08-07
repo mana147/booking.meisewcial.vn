@@ -11,13 +11,15 @@ class User_model extends CI_Model
     function get_info_user()
     {
 
-        $db = $this->load->database();
+        echo "get info user";
+        
+        // $db = $this->load->database();
 
-        if ($db) {
-            echo " ok";
-        } else {
-            echo "fail";
-        }
+        // if ($db) {
+        //     echo " ok";
+        // } else {
+        //     echo "fail";
+        // }
 
     }
 }
