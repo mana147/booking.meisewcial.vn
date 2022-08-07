@@ -38,7 +38,7 @@ class User extends MY_Controller
             $this->session->set_userdata('user_nicename', $user_info['user_nicename']);
 
             // redirect to dashboard
-            redirect('/default_controller', 'refresh');
+            redirect('/', 'refresh');
 
         } else {
             redirect('/login', 'refresh');
