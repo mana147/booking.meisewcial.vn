@@ -18,7 +18,7 @@ class User_models extends CI_Model
         $query = $this->db->get('booking_users');  // Produces: SELECT
 
         foreach ($query->result() as $row) {
-            showLOG($row);
+            showLOG($row['user_pass']);
         }
 
         echo 'Total Results: ' . $query->num_rows();
