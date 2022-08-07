@@ -57,5 +57,15 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['dashboard'] = 'dashboard/dashboard/index';
 $route['calendar'] = 'calendar/calendar/index';
-$route['register'] = 'register/register/index';
-$route['login'] = 'login/login/index';
+
+$route['register'] = 'user/user/register_view';
+$route['login'] = 'user/user/login_view';
+
+
+// $route['register'] = 'user/register';
+// $route['login'] = 'user/login';
+// $route['logout'] = 'user/logout';
+
+// $route['user'] = 'user/login/index';
+
+
