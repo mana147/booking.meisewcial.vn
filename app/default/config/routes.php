@@ -59,9 +59,11 @@ $route['dashboard'] = 'dashboard/dashboard/index';
 $route['calendar'] = 'calendar/calendar/index';
 
 $route['register'] = 'user/user/register_view';
-$route['login'] = 'user/user/login_view';
 
+$route['login'] = 'user/user/login_view';
 $route['login_user'] = 'user/user/login_user';
+
+$route['logout'] = 'user/user/logout';
 
 
 // $route['register'] = 'user/register';
