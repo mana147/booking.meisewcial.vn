@@ -11,10 +11,6 @@ class User_models extends CI_Model
 
     function get_info_user($user_email, $user_password)
     {
-        showLOG([$user_email, $user_password]);
-
-        // $query = $this->db->get('booking_users');  // Produces: SELECT
-
         $this->db->select('*');
         $this->db->from('booking_users');
         $this->db->where('user_email', $user_email);
