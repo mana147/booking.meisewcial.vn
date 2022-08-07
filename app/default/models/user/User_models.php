@@ -8,8 +8,10 @@ class User_models extends CI_Model
         parent::__construct();
     }
 
-    function get_info_user()
+    function get_info_user($user_email, $user_password)
     {
+
+        showLOG([$user_email, $user_password]);
 
         $this->load->database();
 
