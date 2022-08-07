@@ -23,13 +23,22 @@
 
                                     <!-- begin form ('user/register_user')  -->
                                     <form role="form" method="post" action="<?php echo base_url('login_user'); ?>">
-                                        
-                                    <div class="form-group">
-                                            <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
+
+                                        <div class="form-group">
+                                            <input type="email" 
+                                                name="user_email"
+                                                class="form-control form-control-user" 
+                                                id="exampleInputEmail" 
+                                                aria-describedby="emailHelp" 
+                                                placeholder="Enter Email Address..." >
                                         </div>
 
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                                            <input type="password" 
+                                                name="user_password"
+                                                class="form-control form-control-user" 
+                                                id="exampleInputPassword" 
+                                                placeholder="Password">
                                         </div>
 
                                         <div class="form-group">
@@ -43,8 +52,8 @@
                                             Login
                                         </a> -->
 
-                                        <input class="btn btn-primary btn-user btn-block" type="submit" value="login" name="login" >
-                                        
+                                        <input class="btn btn-primary btn-user btn-block" type="submit" value="login" name="login">
+
                                         <!-- <hr> -->
 
                                         <!-- <a href="index.html" class="btn btn-google btn-user btn-block">
