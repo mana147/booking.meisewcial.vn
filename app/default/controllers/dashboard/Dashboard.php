@@ -16,14 +16,14 @@ class Dashboard extends MY_Controller
     function index()
     {
         $data = [];
+        echo " Dashboard > ";
 
-        // $this->User_models->get_info_user();
-        
-        // die;
+        var_dump($_SESSION);
 
-        echo " Dashboard > " ;
 
-        var_dump($_SESSION);die;
+        $this->User_models->get_info_user();
+
+        die;
 
 
         $this->_loadHeader();
