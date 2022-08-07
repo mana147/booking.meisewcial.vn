@@ -84,7 +84,7 @@ $db['default'] = array(
     'username' => DB_MASTER_USER,
     'password' => DB_MASTER_PASS,
     'database' => DB_MASTER_DBNAME,
-    'dbdriver' => 'mysql',
+    'dbdriver' => 'pdo',
     'dbprefix' => '',
     'pconnect' => FALSE,
     'db_debug' => (ENVIRONMENT !== 'production'),

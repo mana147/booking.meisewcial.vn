@@ -10,17 +10,12 @@ class Dashboard extends MY_Controller
         $this->_module = trim(strtolower(__class__));
         parent::__construct();
 
-        $this->load->model('user/User_models');
+        // $this->load->model('user/User_models');
     }
 
     function index()
     {
         $data = [];
-
-        $this->User_models->get_info_user();
-
-
-        die;
 
         var_dump($_SESSION);die;
 
