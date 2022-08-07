@@ -22,18 +22,23 @@ class User_models extends CI_Model
         $query = $this->db->get();
 
         if ($query) {
-          
+
             $info =  $query->result_array();
 
-            echo 'has user';
-            showLOG($info);
-            
+            if ($info) {
+
+                echo 'has user';
+                showLOG($info);
+
+            } else {
+                echo 'nots user';
+            }
+
+
         } else {
-
-            echo 'not user';
+            echo 'nots user';
         }
-        
-        die;
 
+        die;
     }
 }
