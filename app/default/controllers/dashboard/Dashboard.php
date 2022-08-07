@@ -21,6 +21,8 @@ class Dashboard extends MY_Controller
         
         // die;
 
+        echo " Dashboard > " ;
+
         var_dump($_SESSION);die;
 
 
