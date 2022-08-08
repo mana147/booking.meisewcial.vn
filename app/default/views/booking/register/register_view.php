@@ -44,7 +44,7 @@
 
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input type="text" 
-                                            name="first_name"
+                                            name="full_name"
                                             class="form-control form-control-user" 
                                             id="exampleFirstName" 
                                             placeholder="Full Name">
@@ -52,7 +52,7 @@
 
                                     <div class="col-sm-6">
                                         <input type="number" 
-                                            name="last_name"
+                                            name="phone"
                                             class="form-control form-control-user" 
                                             id="examplePhone" 
                                             placeholder="Phone">
