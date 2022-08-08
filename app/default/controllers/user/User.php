@@ -39,12 +39,10 @@ class User extends MY_Controller
 
             // redirect to dashboard
             redirect('/', 'refresh');
-
         } else {
             redirect('/login', 'refresh');
             die();
         }
-
     }
 
 
@@ -72,7 +70,7 @@ class User extends MY_Controller
         $user_password = trim(removeAllTags($this->input->post('password')));
         $user_password = md5($user_password);
 
-        showLOG([$full_name , ]);
+        showLOG([$full_name, $phone, $user_email, $user_password]);
 
 
         // $user_info = $this->User_models->set_info_user($user_email, $user_password);
@@ -81,7 +79,6 @@ class User extends MY_Controller
 
 
         die;
-
     }
 
     function register_view()
@@ -100,5 +97,4 @@ class User extends MY_Controller
         $this->session->sess_destroy();
         redirect('/');
     }
-    
 }
