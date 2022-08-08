@@ -72,20 +72,13 @@ class User extends MY_Controller
         $user_password = trim(removeAllTags($this->input->post('password')));
         $user_password = md5($user_password);
 
-
-
-
+        showLOG($_POST);
 
 
         // $user_info = $this->User_models->set_info_user($user_email, $user_password);
 
 
 
-
-
-
-
-        showLOG($_POST);
 
         die;
 
