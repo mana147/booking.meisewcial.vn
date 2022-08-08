@@ -47,15 +47,15 @@
                                             name="first_name"
                                             class="form-control form-control-user" 
                                             id="exampleFirstName" 
-                                            placeholder="First Name">
+                                            placeholder="Full Name">
                                     </div>
 
                                     <div class="col-sm-6">
-                                        <input type="text" 
+                                        <input type="number" 
                                             name="last_name"
                                             class="form-control form-control-user" 
-                                            id="exampleLastName" 
-                                            placeholder="Last Name">
+                                            id="examplePhone" 
+                                            placeholder="Phone">
                                     </div>
 
                                 </div>

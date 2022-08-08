@@ -64,6 +64,27 @@ class User extends MY_Controller
     {
         $this->_function = trim(strtolower(__FUNCTION__));
 
+
+        $first_name = trim(removeAllTags($this->input->post('first_name')));
+        $last_name = trim(removeAllTags($this->input->post('last_name')));
+
+        $user_email = trim(removeAllTags($this->input->post('email')));
+        $user_password = trim(removeAllTags($this->input->post('password')));
+        $user_password = md5($user_password);
+
+
+
+
+        
+
+        // $user_info = $this->User_models->set_info_user($user_email, $user_password);
+
+
+
+
+
+
+
         showLOG($_POST);
 
         die;
