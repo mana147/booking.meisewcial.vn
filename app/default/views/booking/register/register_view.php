@@ -74,7 +74,8 @@
                                         <input type="password" 
                                             class="form-control form-control-user" 
                                             id="exampleInputPassword" 
-                                            placeholder="Password">
+                                            placeholder="Password"
+                                            autocomplete="on">
                                     </div>
 
                                     <div class="col-sm-6">
@@ -82,7 +83,8 @@
                                             name="password"
                                             class="form-control form-control-user" 
                                             id="exampleRepeatPassword" 
-                                            placeholder="Repeat Password">
+                                            placeholder="Repeat Password"
+                                            autocomplete="on">
                                     </div>
 
                                 </div>
