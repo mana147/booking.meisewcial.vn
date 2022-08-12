@@ -44,13 +44,28 @@ class User_models extends CI_Model
         $this->db->where('user_email', $user_email);
         $query = $this->db->get();
         if ($query) {
-
             $info = $query->result_array();
             if ($info) {
-                return 1;
+                return true;
             } else {
-                return 0;
+                return false;
             }
+        }
+    }
+
+    function set_info_to_database($full_name, $phone, $user_email, $user_password)
+    {
+        $data = array(
+            'user_nicename' => $full_name,
+            'user_phone' => $phone,
+            'user_login' => $user_email,
+            'user_pass' => $user_password
+        );
+
+        $query = $this->db->insert('booking_users', $data);
+        
+        if ($query) {
+            return true;
         }
     }
 }

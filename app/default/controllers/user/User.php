@@ -63,9 +63,10 @@ class User extends MY_Controller
         $this->_function = trim(strtolower(__FUNCTION__));
         $data_view = [];
 
+
+        // PORT 
         $full_name = trim(removeAllTags($this->input->post('full_name')));
         $phone = trim(removeAllTags($this->input->post('phone')));
-
         $user_email = trim(removeAllTags($this->input->post('email')));
         $user_password = trim(removeAllTags($this->input->post('password')));
         $user_password = md5($user_password);
@@ -78,8 +79,16 @@ class User extends MY_Controller
             $data_view['error_msg'] = 'mail đã được sử dụng';
 
             $this->load->view($this->_template_f . 'register/register_view', $data_view);
+
         } else {
+            
             showLOG([$full_name, $phone, $user_email, $user_password]);
+            // set info to database 
+            $set_info_to_database = $this->User_models->set_info_to_database($full_name, $phone, $user_email, $user_password);
+        
+            showLOG($set_info_to_database);
+
+
         }
     }
 
