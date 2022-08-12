@@ -74,13 +74,7 @@ class User extends MY_Controller
 
         $check_user_email = $this->User_models->check_user_email($user_email);
         
-        var_dump($check_user_email);
-        
-        if ($check_user_email) {
-
-        }
-
-
+        showLOG($check_user_email);
 
         showLOG([$full_name, $phone, $user_email, $user_password]);
 
