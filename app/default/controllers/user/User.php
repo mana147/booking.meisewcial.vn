@@ -82,11 +82,14 @@ class User extends MY_Controller
 
         } else {
             
-            showLOG([$full_name, $phone, $user_email, $user_password]);
+            // showLOG([$full_name, $phone, $user_email, $user_password]);
             // set info to database 
             $set_info_to_database = $this->User_models->set_info_to_database($full_name, $phone, $user_email, $user_password);
-            showLOG($set_info_to_database);
 
+            if ($set_info_to_database) {
+                redirect('/login', 'refresh');
+                die();
+            }
 
         }
     }
