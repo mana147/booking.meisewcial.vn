@@ -55,13 +55,16 @@ class User_models extends CI_Model
 
     function set_info_to_database($full_name, $phone, $user_email, $user_password)
     {
+        //  $user_email
         $data = array(
             'user_nicename' => $full_name,
             'user_phone' => $phone,
             'user_login' => $user_email,
             'user_email' => $user_email,
-            'user_pass' => $user_password
+            'user_pass' => $user_password,
+            'id_calendar' => uniqid()
         );
+        
 
         $query = $this->db->insert('booking_users', $data);
 
