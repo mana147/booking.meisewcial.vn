@@ -23,13 +23,8 @@ class User extends MY_Controller
         $user_password = trim(removeAllTags($this->input->post('user_password')));
         $user_password = md5($user_password);
 
-        showLOG([$user_email, $user_password]);
-
-
         // check in database
         $user_info = $this->User_models->get_info_user($user_email, $user_password);
-
-        showLOG($user_info);die;
 
         if ($user_info) {
 
@@ -90,7 +85,6 @@ class User extends MY_Controller
             showLOG([$full_name, $phone, $user_email, $user_password]);
             // set info to database 
             $set_info_to_database = $this->User_models->set_info_to_database($full_name, $phone, $user_email, $user_password);
-        
             showLOG($set_info_to_database);
 
 
