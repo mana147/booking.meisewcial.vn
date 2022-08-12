@@ -61,7 +61,7 @@ class User extends MY_Controller
     function register_user()
     {
         $this->_function = trim(strtolower(__FUNCTION__));
-
+        $data_view = [];
 
         $full_name = trim(removeAllTags($this->input->post('full_name')));
         $phone = trim(removeAllTags($this->input->post('phone')));
@@ -71,14 +71,16 @@ class User extends MY_Controller
         $user_password = md5($user_password);
 
         // check email in database
-
         $check_user_email = $this->User_models->check_user_email($user_email);
-        
-        showLOG($check_user_email);
 
-        showLOG([$full_name, $phone, $user_email, $user_password]);
+        // if check_user_email == false > khong co mail trong database
+        if ($check_user_email) {
+            $data_view['error_msg'] = 'mail đã được sử dụng';
 
-        die;
+            $this->load->view($this->_template_f . 'register/register_view', $data_view);
+        } else {
+            showLOG([$full_name, $phone, $user_email, $user_password]);
+        }
     }
 
     function register_view()
