@@ -56,7 +56,7 @@ class User_models extends CI_Model
     function set_info_to_database($full_name, $phone, $user_email, $user_password)
     {
         //  $user_email
-        $id_calendar = md5($user_email);
+        $id_calendar = time().mt_rand();
 
         $data = array(
             'user_nicename' => $full_name,
