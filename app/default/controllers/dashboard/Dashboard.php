@@ -25,6 +25,7 @@ class Dashboard extends MY_Controller
         $data_view['info_user_email'] = $_SESSION['user_email'];
         $data_view['info_user_nicename'] = $_SESSION['user_nicename'];
 
+        showLOG($_SESSION);
 
         $this->_loadHeader();
         $this->load->view($this->_template_f . 'dashboard/dashboard_view' , $data_view);
