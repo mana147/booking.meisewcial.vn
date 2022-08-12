@@ -62,7 +62,7 @@ class User_models extends CI_Model
             'user_login' => $user_email,
             'user_email' => $user_email,
             'user_pass' => $user_password,
-            'id_calendar' => uniqid(rand(), true)
+            'id_calendar' => uniqid(rand(), false)
         );
 
         $query = $this->db->insert('booking_users', $data);
