@@ -36,11 +36,18 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
                             </div>
-                            
+
                             <?php if (isset($error_msg)) { ?>
-                            <div class="alert alert-danger">
-                                <strong>Error!</strong> <?php echo $error_msg?>.
-                            </div>
+                                <div class="alert alert-danger">
+                                    <strong>Error!</strong> <?php echo $error_msg ?>.
+                                </div>
+                            <?php } ?>
+
+
+                            <?php if (isset($done_msg)) { ?>
+                                <div class="alert alert-success">
+                                    <strong>Success!</strong> <?php echo $done_msg ?>.
+                                </div>
                             <?php } ?>
 
 

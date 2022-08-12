@@ -79,18 +79,22 @@ class User extends MY_Controller
             $data_view['error_msg'] = 'mail đã được sử dụng';
 
             $this->load->view($this->_template_f . 'register/register_view', $data_view);
-
+           
+            die;
         } else {
-            
+
             // showLOG([$full_name, $phone, $user_email, $user_password]);
             // set info to database 
             $set_info_to_database = $this->User_models->set_info_to_database($full_name, $phone, $user_email, $user_password);
 
             if ($set_info_to_database) {
-                redirect('/login', 'refresh');
+
+                $data_view['done_msg'] = ' Đăng ký tài khoản thành công';
+
+                $this->load->view($this->_template_f . 'register/register_view', $data_view);
+
                 die();
             }
-
         }
     }
 
