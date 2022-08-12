@@ -23,8 +23,11 @@ class User extends MY_Controller
         $user_password = trim(removeAllTags($this->input->post('user_password')));
         $user_password = md5($user_password);
 
+
         // check in database
         $user_info = $this->User_models->get_info_user($user_email, $user_password);
+
+        showLOG($user_info);die;
 
         if ($user_info) {
 

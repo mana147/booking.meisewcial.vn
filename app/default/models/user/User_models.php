@@ -59,11 +59,12 @@ class User_models extends CI_Model
             'user_nicename' => $full_name,
             'user_phone' => $phone,
             'user_login' => $user_email,
+            'user_email' => $user_email,
             'user_pass' => $user_password
         );
 
         $query = $this->db->insert('booking_users', $data);
-        
+
         if ($query) {
             return true;
         }
