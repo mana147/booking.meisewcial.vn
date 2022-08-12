@@ -70,13 +70,19 @@ class User extends MY_Controller
         $user_password = trim(removeAllTags($this->input->post('password')));
         $user_password = md5($user_password);
 
+        // check email in database
+
+        $check_user_email = $this->User_models->check_user_email($user_email);
+        
+        var_dump($check_user_email);
+        
+        if ($check_user_email) {
+
+        }
+
+
+
         showLOG([$full_name, $phone, $user_email, $user_password]);
-
-
-        // $user_info = $this->User_models->set_info_user($user_email, $user_password);
-
-
-
 
         die;
     }

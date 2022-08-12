@@ -26,16 +26,27 @@ class User_models extends CI_Model
                 if ($user_password ==  $info[0]['user_pass']) {
 
                     return $info[0];
-
                 } else {
                     return false;
                     // echo 'error password';
                 }
-
             } else {
                 return false;
                 // echo 'error user';
             }
+        }
+    }
+
+    function check_user_email($user_email)
+    {
+        $this->db->select('*');
+        $this->db->from('booking_users');
+        $this->db->where('user_email', $user_email);
+
+        $query = $this->db->get();
+
+        if ($query) {
+            showLOG($query);
         }
     }
 }
