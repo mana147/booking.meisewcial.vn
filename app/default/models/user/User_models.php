@@ -70,7 +70,7 @@ class User_models extends CI_Model
             'profile' => 'profile'
         );
 
-        $query = $this->db->insert('users', $data);
+        $query = $this->db->insert('user', $data);
 
         //  $user_email
         // $id_calendar = time() . mt_rand();
