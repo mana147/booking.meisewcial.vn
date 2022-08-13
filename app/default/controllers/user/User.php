@@ -26,6 +26,9 @@ class User extends MY_Controller
         // check in database
         $user_info = $this->User_models->get_info_user($user_email, $user_password);
 
+        showLOG($user_info);
+        die;
+
         if ($user_info) {
 
             // unset all session before init
