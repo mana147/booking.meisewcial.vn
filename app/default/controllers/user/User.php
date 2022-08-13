@@ -25,10 +25,7 @@ class User extends MY_Controller
 
         // check in database
         $user_info = $this->User_models->get_info_user($user_email, $user_password);
-
-        showLOG($user_info);
-        die;
-
+        
         if ($user_info) {
 
             // unset all session before init
@@ -36,9 +33,9 @@ class User extends MY_Controller
             session_regenerate_id(true);
             // add info to session
 
-            $this->session->set_userdata('user_id', $user_info['ID']);
-            $this->session->set_userdata('user_email', $user_info['user_email']);
-            $this->session->set_userdata('user_nicename', $user_info['user_nicename']);
+            $this->session->set_userdata('user_id', $user_info['id']);
+            $this->session->set_userdata('user_email', $user_info['email']);
+            $this->session->set_userdata('user_nicename', $user_info['username']);
 
             // redirect to dashboard
             redirect('/', 'refresh');
