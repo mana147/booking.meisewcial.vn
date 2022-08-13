@@ -12,8 +12,8 @@ class User_models extends CI_Model
     function get_info_user($user_email, $user_password)
     {
         $this->db->select('*');
-        $this->db->from('booking_users');
-        $this->db->where('user_email', $user_email);
+        $this->db->from('user');
+        $this->db->where('email', $user_email);
 
         $query = $this->db->get();
 
@@ -23,7 +23,7 @@ class User_models extends CI_Model
 
             if ($info) {
 
-                if ($user_password ==  $info[0]['user_pass']) {
+                if ($user_password ==  $info[0]['passwordHash']) {
 
                     return $info[0];
                 } else {
@@ -40,8 +40,8 @@ class User_models extends CI_Model
     function check_user_email($user_email)
     {
         $this->db->select('*');
-        $this->db->from('booking_users');
-        $this->db->where('user_email', $user_email);
+        $this->db->from('user');
+        $this->db->where('email', $user_email);
         $query = $this->db->get();
         if ($query) {
             $info = $query->result_array();
