@@ -55,19 +55,36 @@ class User_models extends CI_Model
 
     function set_info_to_database($full_name, $phone, $user_email, $user_password)
     {
-        //  $user_email
-        $id_calendar = time().mt_rand();
 
         $data = array(
-            'user_nicename' => $full_name,
-            'user_phone' => $phone,
-            'user_login' => $user_email,
-            'user_email' => $user_email,
-            'user_pass' => $user_password,
-            'id_calendar' => $id_calendar
+            'firstName' => '',
+            'middleName' => '',
+            'lastName' => '',
+            'username' => $full_name,
+            'mobile' => $phone,
+            'email' => $user_email,
+            'passwordHash' => $user_password,
+            'registeredAt' => '',
+            'lastLogin' => time(),
+            'intro' => 'intro',
+            'profile' => 'profile'
         );
 
-        $query = $this->db->insert('booking_users', $data);
+        $query = $this->db->insert('users', $data);
+
+        //  $user_email
+        // $id_calendar = time() . mt_rand();
+
+        // $data = array(
+        //     'user_nicename' => $full_name,
+        //     'user_phone' => $phone,
+        //     'user_login' => $user_email,
+        //     'user_email' => $user_email,
+        //     'user_pass' => $user_password,
+        //     'id_calendar' => $id_calendar
+        // );
+
+        // $query = $this->db->insert('booking_users', $data);
 
         if ($query) {
             return true;
