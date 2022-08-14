@@ -306,7 +306,6 @@
                     <!-- Calendar full -->
                     <style>
                         #calendar {
-                            max-height: 1000px;
                         }
                     </style>
 
@@ -317,6 +316,7 @@
                             var calendarEl = document.getElementById('calendar');
 
                             var calendar = new FullCalendar.Calendar(calendarEl, {
+                                schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',
                                 initialView: 'resourceTimeGridTwoDay',
                                 initialDate: '2020-09-07',
                                 editable: true,
