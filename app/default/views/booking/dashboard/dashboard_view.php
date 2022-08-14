@@ -304,6 +304,12 @@
                     </div>
 
                     <!-- Calendar full -->
+                    <style>
+                        #calendar {
+                            max-height: 1000px;
+                        }
+                    </style>
+
                     <div id='calendar'></div>
 
                     <script>
