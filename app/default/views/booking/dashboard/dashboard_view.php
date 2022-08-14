@@ -300,7 +300,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Booking</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Booking - Pole Dancing</h1>
                     </div>
 
                     <!-- Calendar full -->
@@ -338,7 +338,7 @@
                                 //allDaySlot: false,
 
                                 resources: [
-                                    { id: 'a', title: 'Room A' },
+                                    { id: 'a', title: 'Room - Pole Dancing' },
                                 ],
 
                                 events: [
