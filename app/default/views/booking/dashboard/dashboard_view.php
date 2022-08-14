@@ -324,7 +324,7 @@
                                 headerToolbar: {
                                     left: 'prev,next today',
                                     center: 'title',
-                                    right: 'resourceTimeGridDay,resourceTimeGridWeek,dayGridMonth'
+                                    right: 'resourceTimeGridTwoDay,resourceTimeGridDay,resourceTimeGridWeek,dayGridMonth'
                                 },
                                 views: {
                                     resourceTimeGridTwoDay: {
