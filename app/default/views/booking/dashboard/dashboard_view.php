@@ -304,13 +304,6 @@
                     </div>
 
                     <!-- Calendar full -->
-                    <style>
-                        #calendar {
-                            max-width: 1100px;
-                            margin: 50px auto;
-                        }
-                    </style>
-
                     <div id='calendar'></div>
 
                     <script>
