@@ -324,14 +324,12 @@
                                 headerToolbar: {
                                     left: 'prev,next today',
                                     center: 'title',
-                                    right: 'resourceTimeGridDay,resourceTimeGridTwoDay,resourceTimeGridWeek,dayGridMonth'
+                                    right: 'resourceTimeGridDay,resourceTimeGridWeek,dayGridMonth'
                                 },
                                 views: {
                                     resourceTimeGridTwoDay: {
                                         type: 'resourceTimeGrid',
-                                        duration: {
-                                            days: 7
-                                        },
+                                        duration: { days: 7 },
                                         buttonText: '7 days',
                                     }
                                 },
@@ -341,7 +339,6 @@
 
                                 resources: [
                                     { id: 'a', title: 'Room A' },
-                                    { id: 'b', title: 'Room B', eventColor: 'green' }
                                 ],
 
                                 events: [
@@ -355,7 +352,7 @@
                                     },
                                     {
                                         id: '3',
-                                        resourceId: 'b',
+                                        resourceId: 'a',
                                         start: '2020-09-07T12:00:00',
                                         end: '2020-09-08T06:00:00',
                                         title: 'event 3'
@@ -369,7 +366,7 @@
                                     },
                                     {
                                         id: '5',
-                                        resourceId: 'b',
+                                        resourceId: 'a',
                                         start: '2020-09-07T10:00:00',
                                         end: '2020-09-07T15:00:00',
                                         title: 'event 5'
