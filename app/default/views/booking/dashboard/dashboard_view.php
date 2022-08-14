@@ -329,7 +329,6 @@
                             var calendarEl = document.getElementById('calendar');
 
                             var calendar = new FullCalendar.Calendar(calendarEl, {
-                                height: '100%',
                                 aspectRatio: 1.8,
                                 editable: true, // enable draggable events
                                 now: '2020-09-07',
