@@ -330,42 +330,22 @@
                                     resourceTimeGridTwoDay: {
                                         type: 'resourceTimeGrid',
                                         duration: {
-                                            days: 2
+                                            days: 7
                                         },
-                                        buttonText: '2 days',
+                                        buttonText: '7 days',
                                     }
                                 },
 
                                 //// uncomment this line to hide the all-day slot
                                 //allDaySlot: false,
 
-                                resources: [{
-                                        id: 'a',
-                                        title: 'Room A'
-                                    },
-                                    {
-                                        id: 'b',
-                                        title: 'Room B',
-                                        eventColor: 'green'
-                                    },
-                                    {
-                                        id: 'c',
-                                        title: 'Room C',
-                                        eventColor: 'orange'
-                                    },
-                                    {
-                                        id: 'd',
-                                        title: 'Room D',
-                                        eventColor: 'red'
-                                    }
+                                resources: [
+                                    { id: 'a', title: 'Room A' },
+                                    { id: 'b', title: 'Room B', eventColor: 'green' }
                                 ],
-                                events: [{
-                                        id: '1',
-                                        resourceId: 'a',
-                                        start: '2020-09-06',
-                                        end: '2020-09-08',
-                                        title: 'event 1'
-                                    },
+
+                                events: [
+                                    { id: '1', resourceId: 'a', start: '2020-09-06', end: '2020-09-08', title: 'event 1' },
                                     {
                                         id: '2',
                                         resourceId: 'a',
@@ -382,14 +362,14 @@
                                     },
                                     {
                                         id: '4',
-                                        resourceId: 'c',
+                                        resourceId: 'a',
                                         start: '2020-09-07T07:30:00',
                                         end: '2020-09-07T09:30:00',
                                         title: 'event 4'
                                     },
                                     {
                                         id: '5',
-                                        resourceId: 'd',
+                                        resourceId: 'b',
                                         start: '2020-09-07T10:00:00',
                                         end: '2020-09-07T15:00:00',
                                         title: 'event 5'
