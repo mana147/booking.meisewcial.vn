@@ -25,7 +25,7 @@ class User extends MY_Controller
 
         // check in database
         $user_info = $this->User_models->get_info_user($user_email, $user_password);
-        
+
         if ($user_info) {
 
             // unset all session before init
@@ -73,20 +73,19 @@ class User extends MY_Controller
 
         // check email in database
         $check_user_email = $this->User_models->check_user_email($user_email);
+        $check_user_phone = $this->User_models->check_user_mobile($phone);
 
         // if check_user_email == false > khong co mail trong database
         if ($check_user_email) {
             $data_view['error_msg'] = 'mail đã được sử dụng';
-
             $this->load->view($this->_template_f . 'register/register_view', $data_view);
-           
-            die;
-        } else {
-
+        } else if ($check_user_phone) {
+            $data_view['error_msg'] = 'số điện thoại đã được sử dụng';
+            $this->load->view($this->_template_f . 'register/register_view', $data_view);
+        }else{
             // showLOG([$full_name, $phone, $user_email, $user_password]);
             // set info to database 
             $set_info_to_database = $this->User_models->set_info_to_database($full_name, $phone, $user_email, $user_password);
-
             if ($set_info_to_database) {
 
                 $data_view['done_msg'] = ' Đăng ký tài khoản thành công';

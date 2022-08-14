@@ -53,6 +53,23 @@ class User_models extends CI_Model
         }
     }
 
+    function check_user_mobile($user_mobile)
+    {
+        $this->db->select('*');
+        $this->db->from('user');
+        $this->db->where('mobile', $user_mobile);
+        $query = $this->db->get();
+        if ($query) {
+            $info = $query->result_array();
+            if ($info) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
+
     function set_info_to_database($full_name, $phone, $user_email, $user_password)
     {
 
