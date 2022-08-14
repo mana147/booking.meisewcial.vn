@@ -338,7 +338,8 @@
                                 //allDaySlot: false,
 
                                 resources: [
-                                    { id: 'a', title: 'Room - Pole Dancing' },
+                                    { id: 'a', title: 'Room - Pole Dancing - Hồ Chí Minh City' },
+                                    { id: 'b', title: 'Room - Pole Dancing - Hà Nội City' },
                                 ],
 
                                 events: [
