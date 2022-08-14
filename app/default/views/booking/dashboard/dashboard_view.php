@@ -305,8 +305,6 @@
 
                     <!-- Calendar full -->
                     <style>
-                        #calendar {
-                        }
                     </style>
 
                     <div id='calendar'></div>
