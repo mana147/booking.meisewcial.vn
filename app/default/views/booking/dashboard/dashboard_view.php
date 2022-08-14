@@ -305,144 +305,115 @@
 
                     <!-- Calendar full -->
                     <style>
-                        #calendar-container {
-                            position: fixed;
-                            top: 0;
-                            left: 0;
-                            right: 0;
-                            bottom: 0;
-                        }
-
-                        .fc-header-toolbar {
-                            padding-top: 1em;
-                            padding-left: 1em;
-                            padding-right: 1em;
+                        #calendar {
+                            max-width: 1100px;
+                            margin: 50px auto;
                         }
                     </style>
 
-                    <div id='calendar-container'>
-                        <div id='calendar'></div>
-                    </div>
+                    <div id='calendar'></div>
 
                     <script>
                         document.addEventListener('DOMContentLoaded', function() {
                             var calendarEl = document.getElementById('calendar');
 
                             var calendar = new FullCalendar.Calendar(calendarEl, {
-                                aspectRatio: 1.8,
-                                editable: true, // enable draggable events
-                                now: '2020-09-07',
-                                scrollTime: '00:00', // undo default 6am scrollTime
+                                initialView: 'resourceTimeGridTwoDay',
+                                initialDate: '2020-09-07',
+                                editable: true,
+                                selectable: true,
+                                dayMaxEvents: true, // allow "more" link when too many events
+                                dayMinWidth: 200,
                                 headerToolbar: {
-                                    left: 'today prev,next',
+                                    left: 'prev,next today',
                                     center: 'title',
-                                    right: 'resourceTimelineDay,resourceTimelineThreeDays,timeGridWeek,dayGridMonth,listWeek'
+                                    right: 'resourceTimeGridDay,resourceTimeGridTwoDay,resourceTimeGridWeek,dayGridMonth'
                                 },
-                                initialView: 'resourceTimelineDay',
                                 views: {
-                                    resourceTimelineThreeDays: {
-                                        type: 'resourceTimeline',
+                                    resourceTimeGridTwoDay: {
+                                        type: 'resourceTimeGrid',
                                         duration: {
-                                            days: 3
+                                            days: 2
                                         },
-                                        buttonText: '3 days'
+                                        buttonText: '2 days',
                                     }
                                 },
-                                expandRows: true,
-                                resourceAreaHeaderContent: 'Rooms',
+
+                                //// uncomment this line to hide the all-day slot
+                                //allDaySlot: false,
+
                                 resources: [{
                                         id: 'a',
-                                        title: 'Auditorium A'
+                                        title: 'Room A'
                                     },
                                     {
                                         id: 'b',
-                                        title: 'Auditorium B',
+                                        title: 'Room B',
                                         eventColor: 'green'
                                     },
                                     {
                                         id: 'c',
-                                        title: 'Auditorium C',
+                                        title: 'Room C',
                                         eventColor: 'orange'
                                     },
                                     {
                                         id: 'd',
-                                        title: 'Auditorium D',
-                                        children: [{
-                                                id: 'd1',
-                                                title: 'Room D1'
-                                            },
-                                            {
-                                                id: 'd2',
-                                                title: 'Room D2'
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        id: 'e',
-                                        title: 'Auditorium E'
-                                    },
-                                    {
-                                        id: 'f',
-                                        title: 'Auditorium F',
+                                        title: 'Room D',
                                         eventColor: 'red'
-                                    },
-                                    // { id: 'g', title: 'Auditorium G' },
-                                    // { id: 'h', title: 'Auditorium H' },
-                                    // { id: 'i', title: 'Auditorium I' },
-                                    // { id: 'j', title: 'Auditorium J' },
-                                    // { id: 'k', title: 'Auditorium K' },
-                                    // { id: 'l', title: 'Auditorium L' },
-                                    // { id: 'm', title: 'Auditorium M' },
-                                    // { id: 'n', title: 'Auditorium N' },
-                                    // { id: 'o', title: 'Auditorium O' },
-                                    // { id: 'p', title: 'Auditorium P' },
-                                    // { id: 'q', title: 'Auditorium Q' },
-                                    // { id: 'r', title: 'Auditorium R' },
-                                    // { id: 's', title: 'Auditorium S' },
-                                    // { id: 't', title: 'Auditorium T' },
-                                    // { id: 'u', title: 'Auditorium U' },
-                                    // { id: 'v', title: 'Auditorium V' },
-                                    // { id: 'w', title: 'Auditorium W' },
-                                    // { id: 'x', title: 'Auditorium X' },
-                                    // { id: 'y', title: 'Auditorium Y' },
-                                    // { id: 'z', title: 'Auditorium Z' }
+                                    }
                                 ],
                                 events: [{
                                         id: '1',
-                                        resourceId: 'b',
-                                        start: '2020-09-07T02:00:00',
-                                        end: '2020-09-07T07:00:00',
+                                        resourceId: 'a',
+                                        start: '2020-09-06',
+                                        end: '2020-09-08',
                                         title: 'event 1'
                                     },
                                     {
                                         id: '2',
-                                        resourceId: 'c',
-                                        start: '2020-09-07T05:00:00',
-                                        end: '2020-09-07T22:00:00',
+                                        resourceId: 'a',
+                                        start: '2020-09-07T09:00:00',
+                                        end: '2020-09-07T14:00:00',
                                         title: 'event 2'
                                     },
                                     {
                                         id: '3',
-                                        resourceId: 'd',
-                                        start: '2020-09-06',
-                                        end: '2020-09-08',
+                                        resourceId: 'b',
+                                        start: '2020-09-07T12:00:00',
+                                        end: '2020-09-08T06:00:00',
                                         title: 'event 3'
                                     },
                                     {
                                         id: '4',
-                                        resourceId: 'e',
-                                        start: '2020-09-07T03:00:00',
-                                        end: '2020-09-07T08:00:00',
+                                        resourceId: 'c',
+                                        start: '2020-09-07T07:30:00',
+                                        end: '2020-09-07T09:30:00',
                                         title: 'event 4'
                                     },
                                     {
                                         id: '5',
-                                        resourceId: 'f',
-                                        start: '2020-09-07T00:30:00',
-                                        end: '2020-09-07T02:30:00',
+                                        resourceId: 'd',
+                                        start: '2020-09-07T10:00:00',
+                                        end: '2020-09-07T15:00:00',
                                         title: 'event 5'
                                     }
-                                ]
+                                ],
+
+                                select: function(arg) {
+                                    console.log(
+                                        'select',
+                                        arg.startStr,
+                                        arg.endStr,
+                                        arg.resource ? arg.resource.id : '(no resource)'
+                                    );
+                                },
+                                dateClick: function(arg) {
+                                    console.log(
+                                        'dateClick',
+                                        arg.date,
+                                        arg.resource ? arg.resource.id : '(no resource)'
+                                    );
+                                }
                             });
 
                             calendar.render();
