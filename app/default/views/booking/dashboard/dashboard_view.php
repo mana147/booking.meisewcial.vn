@@ -295,13 +295,18 @@
                 </nav>
                 <!-- End of Topbar -->
 
-                <!-- Begin Page Content --> 
+                <!-- Begin Page Content -->
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Booking - Pole Dancing</h1>
                     </div>
+
+                    <!-- Button to Open the Modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                        Open modal
+                    </button>
 
                     <!-- Calendar full -->
                     <style>
@@ -329,7 +334,9 @@
                                 views: {
                                     resourceTimeGridTwoDay: {
                                         type: 'resourceTimeGrid',
-                                        duration: { days: 7 },
+                                        duration: {
+                                            days: 7
+                                        },
                                         buttonText: '7 days',
                                     }
                                 },
@@ -337,20 +344,20 @@
                                 //// uncomment this line to hide the all-day slot
                                 //allDaySlot: false,
 
-                                resources: [
-                                    { id: 'a', title: 'Room - Pole Dancing - Hồ Chí Minh City' },
+                                resources: [{
+                                        id: 'a',
+                                        title: 'Room - Pole Dancing - Hồ Chí Minh City'
+                                    },
                                     // { id: 'b', title: 'Room - Pole Dancing - Hà Nội City' },
                                 ],
 
-                                events: [
-                                    {
-                                        id: '2',
-                                        resourceId: 'a',
-                                        start: '2020-09-07T09:00:00',
-                                        end: '2020-09-07T14:00:00',
-                                        title: 'event 2'
-                                    },
-                                ],
+                                events: [{
+                                    id: '2',
+                                    resourceId: 'a',
+                                    start: '2020-09-07T09:00:00',
+                                    end: '2020-09-07T14:00:00',
+                                    title: 'event 2'
+                                }, ],
 
                                 select: function(arg) {
                                     console.log(
@@ -419,5 +426,32 @@
             </div>
         </div>
     </div>
+
+    <!-- booking Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal Heading</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Modal body..
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
 
 </body>
