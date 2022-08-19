@@ -304,9 +304,9 @@
                     </div>
 
                     <!-- Button to Open the Modal -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                         Open modal
-                    </button>
+                    </button> -->
 
                     <!-- Calendar full -->
                     <style>
@@ -368,11 +368,13 @@
                                     );
                                 },
                                 dateClick: function(arg) {
-                                    console.log(
-                                        'dateClick',
-                                        arg.date,
-                                        arg.resource ? arg.resource.id : '(no resource)'
-                                    );
+                                    $("#myModal").modal();
+                                    
+                                    // console.log(
+                                    //     'dateClick',
+                                    //     arg.date,
+                                    //     arg.resource ? arg.resource.id : '(no resource)'
+                                    // );
                                 }
                             });
 
