@@ -295,7 +295,7 @@
                 </nav>
                 <!-- End of Topbar -->
 
-                <!-- Begin Page Content -->
+                <!-- Begin Page Content --> 
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
@@ -339,7 +339,7 @@
 
                                 resources: [
                                     { id: 'a', title: 'Room - Pole Dancing - Hồ Chí Minh City' },
-                                    { id: 'b', title: 'Room - Pole Dancing - Hà Nội City' },
+                                    // { id: 'b', title: 'Room - Pole Dancing - Hà Nội City' },
                                 ],
 
                                 events: [
