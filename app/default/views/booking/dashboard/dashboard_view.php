@@ -343,35 +343,13 @@
                                 ],
 
                                 events: [
-                                    { id: '1', resourceId: 'a', start: '2020-09-06', end: '2020-09-08', title: 'event 1' },
                                     {
                                         id: '2',
                                         resourceId: 'a',
-                                        start: '2020-09-07 T 09:00:00',
-                                        end: '2020-09-07 T 14:00:00',
+                                        start: '2020-09-07T09:00:00',
+                                        end: '2020-09-07T14:00:00',
                                         title: 'event 2'
                                     },
-                                    {
-                                        id: '3',
-                                        resourceId: 'a',
-                                        start: '2020-09-07T12:00:00',
-                                        end: '2020-09-08T06:00:00',
-                                        title: 'event 3'
-                                    },
-                                    {
-                                        id: '4',
-                                        resourceId: 'a',
-                                        start: '2020-09-07T07:30:00',
-                                        end: '2020-09-07T09:30:00',
-                                        title: 'event 4'
-                                    },
-                                    {
-                                        id: '5',
-                                        resourceId: 'a',
-                                        start: '2020-09-07T10:00:00',
-                                        end: '2020-09-07T15:00:00',
-                                        title: 'event 5'
-                                    }
                                 ],
 
                                 select: function(arg) {
