@@ -360,6 +360,9 @@
                                 }, ],
 
                                 select: function(arg) {
+
+                                    $("#myModal").modal();
+                                    
                                     console.log(
                                         'select',
                                         arg.startStr,
@@ -369,7 +372,7 @@
                                 },
                                 dateClick: function(arg) {
                                     $("#myModal").modal();
-                                    
+
                                     // console.log(
                                     //     'dateClick',
                                     //     arg.date,
