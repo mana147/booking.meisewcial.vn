@@ -434,17 +434,33 @@
 
     <!-- booking Modal -->
     <div class="modal" id="myModal">
-        <div class="modal-dialog">
+
+        <div class="modal-dialog modal-dialog-centered">
+
             <div class="modal-content">
 
                 <!-- Modal Header -->
                 <div class="modal-header">
+                    <!-- tiêu đề -->
                     <h4 class="modal-title">Thêm lịch tập - Pole Dancing - Hồ Chí Minh City</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
                 <!-- Modal body -->
                 <div class="modal-body">
+
+
+
+
+                    <!-- khoảng thời gian  -->
+                    <!-- lịch -->
+                    <!-- giờ -->
+
+                    <!-- người tham gia tập -->
+
+                    <!-- ghi chú -->
+
+                    <!-- thiết bị hỗ trợ -->
 
 
                     <form id="contactForm" name="contact" role="form">
@@ -463,34 +479,18 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <input type="submit" class="btn btn-success" id="submit">
-                        </div>
                     </form>
-                    
-                    <!-- tiêu đề -->
-
-                    <!-- khoảng thời gian  -->
-                    <!-- lịch -->
-                    <!-- giờ -->
-
-                    <!-- người tham gia tập -->
-
-                    <!-- ghi chú -->
-
-                    <!-- thiết bị hỗ trợ -->
 
                 </div>
 
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                    <!-- tạo lịch -->
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                    <!-- hủy lịch -->
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-success" id="submit">
                 </div>
 
             </div>
+
         </div>
     </div>
 
