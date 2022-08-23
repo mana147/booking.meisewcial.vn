@@ -434,24 +434,20 @@
 
     <!-- booking Modal -->
     <div class="modal" id="myModal">
-        <div class="modal-dialog modal-lg ">
+
+        <div class="modal-dialog modal-lg">
 
             <div class="modal-content">
 
                 <div class="modal-header modal-frm-header">
 
                     <h3 class="modal-title modal-frm-title">
-                        <span>Thêm lịch họp </span>
+                        <span>Thêm lịch tập </span>
                         <span style="color: dimgray;"> - Phòng A</span>
                         <div class="title-warning-isbook"></div>
                     </h3>
 
-                    <div class="notify-time-more notify-more-detail">
-                        <div aria-expanded="true" class="m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push drop-down-btn" m-dropdown-toggle="click">
-                            <a class="m-portlet__nav-link m-dropdown__toggle btn m-btn m-btn--link" href="#" title=""><i class="flaticon-more"></i></a>
-
-                        </div>
-                    </div><button aria-label="Close" class="close" type="button"><span aria-hidden="true">×</span></button>
+    
                 </div>
 
                 <div class="modal-body modal-frm-book-body">
