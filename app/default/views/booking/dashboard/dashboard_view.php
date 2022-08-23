@@ -435,7 +435,7 @@
     <!-- booking Modal -->
     <div class="modal" id="myModal">
 
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
 
             <div class="modal-content">
 
