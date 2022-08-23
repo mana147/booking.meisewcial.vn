@@ -304,9 +304,9 @@
                     </div>
 
                     <!-- Button to Open the Modal -->
-                    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                         Open modal
-                    </button> -->
+                    </button>
 
                     <!-- Calendar full -->
                     <style>
@@ -362,7 +362,7 @@
                                 select: function(arg) {
 
                                     $("#myModal").modal();
-                                    
+
                                     console.log(
                                         'select',
                                         arg.startStr,
@@ -439,18 +439,55 @@
 
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h4 class="modal-title">Modal Heading</h4>
+                    <h4 class="modal-title">Thêm lịch tập - Pole Dancing - Hồ Chí Minh City</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    Modal body..
+
+
+                    <form id="contactForm" name="contact" role="form">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea name="message" class="form-control"></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <input type="submit" class="btn btn-success" id="submit">
+                        </div>
+                    </form>
+                    
+                    <!-- tiêu đề -->
+
+                    <!-- khoảng thời gian  -->
+                    <!-- lịch -->
+                    <!-- giờ -->
+
+                    <!-- người tham gia tập -->
+
+                    <!-- ghi chú -->
+
+                    <!-- thiết bị hỗ trợ -->
+
                 </div>
 
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    <!-- tạo lịch -->
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <!-- hủy lịch -->
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
 
             </div>
