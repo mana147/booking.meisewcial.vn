@@ -444,10 +444,8 @@
                     <h3 class="modal-title modal-frm-title">
                         <span>Thêm lịch tập </span>
                         <span style="color: dimgray;"> - Phòng A</span>
-                        <div class="title-warning-isbook"></div>
                     </h3>
 
-    
                 </div>
 
                 <div class="modal-body modal-frm-book-body">
