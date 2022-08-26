@@ -326,7 +326,6 @@
                                 selectable: true,
                                 dayMaxEvents: true, // allow "more" link when too many events
                                 dayMinWidth: 200,
-                                firstHour: 8,
                                 headerToolbar: {
                                     left: 'prev,next today',
                                     center: 'title',
