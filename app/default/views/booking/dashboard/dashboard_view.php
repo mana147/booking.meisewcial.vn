@@ -350,7 +350,8 @@
                                         title: 'Room - Pole Dancing - Hồ Chí Minh City',
                                         businessHours: {
                                             startTime: '10:00',
-                                            endTime: '18:00'
+                                            endTime: '18:00',
+                                            daysOfWeek: [ 1, 3, 5 ] // Mon,Wed,Fri
                                         }
                                     },
                                     // { id: 'b', title: 'Room - Pole Dancing - Hà Nội City' },
