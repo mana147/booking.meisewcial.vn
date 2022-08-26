@@ -20,43 +20,32 @@
             Open modal
         </button>
 
-        <!-- The Modal -->
+
+        <!-- booking Modal -->
         <div class="modal" id="myModal">
 
-
-            <div class="modal-dialog modal-lg ">
+            <div class="modal-dialog modal-lg">
 
                 <div class="modal-content">
 
                     <div class="modal-header modal-frm-header">
 
                         <h3 class="modal-title modal-frm-title">
-                            <span>Thêm lịch họp </span>
+                            <span>Thêm lịch tập </span>
                             <span style="color: dimgray;"> - Phòng A</span>
-                            <div class="title-warning-isbook"></div>
                         </h3>
 
-                        <div class="notify-time-more notify-more-detail">
-                            <div aria-expanded="true"
-                                class="m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push drop-down-btn"
-                                m-dropdown-toggle="click">
-                                <a class="m-portlet__nav-link m-dropdown__toggle btn m-btn m-btn--link" href="#"
-                                    title=""><i class="flaticon-more"></i></a>
-
-                            </div>
-                        </div><button aria-label="Close" class="close" type="button"><span
-                                aria-hidden="true">×</span></button>
                     </div>
 
                     <div class="modal-body modal-frm-book-body">
-                        <form novalidate="" class="ng-pristine ng-invalid ng-touched" data-an-count="1"
-                            data-an-form-handler="2el4n">
-                            <div class="form-group"><input autocomplete="off" autofocus="true"
-                                    class="form-control custom-input ng-pristine ng-invalid ng-touched" name="tieude"
-                                    placeholder="Tiêu đề" required="" type="text">
-                                <div class="has-danger">
-                                </div>
+
+                        <form>
+                            
+                            <div class="form-group">
+                                <input autocomplete="off" autofocus="true" class="form-control custom-input ng-pristine ng-invalid ng-touched" name="tieude" placeholder="Tiêu đề" required="" type="text">
+                                <div class="has-danger"> </div>
                             </div>
+
                             <div class="form-group">
                                 <div class="m-demo__preview m-demo__preview--btn gr-btn-check">
                                     <!---->
@@ -91,6 +80,7 @@
                                     <!---->
                                 </div>
                             </div>
+
                             <div class="form-group form-left-img"><img alt="time" class="ng-star-inserted "
                                     src="/assets/common/images/icon-book/phuongthuchop.svg">
                                 <div class="notification-book" style="justify-content: space-between;"><span>Hình thức
@@ -137,6 +127,7 @@
                                     <!---->
                                 </div>
                             </div>
+
                             <div class="form-group form-left-img"><img alt="time" class="ng-star-inserted "
                                     src="/assets/common/images/icon-book/time.svg">
                                 <div class="option-time"><a href="javascript:void(0);">
@@ -271,8 +262,7 @@
                                 </div>
                                 <!---->
                             </div>
-                            <!---->
-                            <!---->
+        
                             <div class="form-group form-left-img ng-star-inserted"><img alt="ghe"
                                     class="ng-star-inserted " src="/assets/common/images/icon-book/address-fff.svg">
                                 <ng-select bindlabel="tenPhong" bindvalue="id"
@@ -303,6 +293,7 @@
                                 </ng-select>
                                 <!---->
                             </div>
+
                             <div class="form-group form-left-img"><img alt="ghe" class="ng-star-inserted "
                                     src="/assets/common/images/icon-book/user.svg">
                                 <ng-select bindlabel="tenNhanVien"
@@ -323,11 +314,13 @@
                                     <!---->
                                 </ng-select>
                             </div>
+
                             <div class="form-group ">
                                 <ul class="list-users">
-                                    <!---->
+
                                 </ul>
                             </div>
+
                             <div class="form-group form-left-img"><img alt="ghe" class="ng-star-inserted "
                                     src="/assets/common/images/icon-book/note.svg"><textarea
                                     class="form-control ng-pristine ng-valid ng-touched" name="LyDo"
@@ -358,6 +351,7 @@
                                             style="display: none;"></span></label><span>Gửi email cho người tham
                                         gia</span></div>
                             </div>
+
                             <div class="warper-inform form-group form-left-img">
                                 <div><img alt="thiet-bi" class="ng-star-inserted "
                                         src="/assets/common/images/icon-book/icon-thietbi.svg">
@@ -408,6 +402,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="form-group form-group-button">
                                 <!---->
                                 <!----><button class="btn btn-success m-btn m-btn--icon m-btn--pill ng-star-inserted"
@@ -417,12 +412,12 @@
                                 <!----><button class="btn btn-secondary m-btn m-btn--icon m-btn--pill ng-star-inserted"
                                     type="button"><span><span>Quay lại</span></span></button>
                             </div>
+
                         </form>
                     </div>
 
                 </div>
             </div>
-            
         </div>
 
     </div>
